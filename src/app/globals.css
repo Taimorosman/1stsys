@@ -352,4 +352,19 @@ select:-webkit-autofill {
   }
 }
 
+/* Global Image Shadow & Opacity Rule */
+img, .image-wrapper img {
+  opacity: 0.90; /* 90% Normal visibility */
+  box-shadow: 0 8px 24px rgba(163, 230, 53, 0.12); /* Subtle light green brand shadow */
+  transition: all 0.4s ease-in-out; /* Smooth transition */
+}
+
+/* Hover State for 100% visibility and elegant lift */
+img:hover, .image-wrapper img:hover {
+  opacity: 1; /* 100% Visibility on Hover */
+  box-shadow: 0 12px 30px rgba(163, 230, 53, 0.25); /* Enhanced soft green glow */
+  transform: translateY(-2px); /* Elegant lift effect */
+}
+
+
 
