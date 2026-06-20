@@ -43,13 +43,7 @@ export function Header({ locale, dict }: Props) {
     return pathname === href || pathname.startsWith(href + "/");
   };
 
-  const otherLocale: Locale = locale === "en" ? "ar" : "en";
-  const switchPath = (() => {
-    if (!pathname) return `/${otherLocale}`;
-    const parts = pathname.split("/").filter(Boolean);
-    if (parts.length > 0) parts[0] = otherLocale;
-    return "/" + parts.join("/");
-  })();
+
 
   return (
     <header
@@ -87,14 +81,7 @@ export function Header({ locale, dict }: Props) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link
-            href={switchPath}
-            className="hidden sm:inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-xs font-medium text-[var(--color-fg-muted)] hover:border-[var(--color-accent)]/40 hover:text-[var(--color-fg)] transition"
-            aria-label="Switch language"
-          >
-            <Icon name="Globe" size={14} />
-            <span>{dict.nav.switchTo}</span>
-          </Link>
+
 
           <Link
             href={`/${locale}/contact`}
@@ -134,17 +121,10 @@ export function Header({ locale, dict }: Props) {
                 </Link>
               );
             })}
-            <div className="mt-3 grid grid-cols-2 gap-2">
-              <Link
-                href={switchPath}
-                className="flex items-center justify-center gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-3 text-sm font-medium"
-              >
-                <Icon name="Globe" size={14} />
-                {dict.nav.switchTo}
-              </Link>
+            <div className="mt-3">
               <Link
                 href={`/${locale}/contact`}
-                className="flex items-center justify-center gap-2 rounded-xl bg-[#1D1D1D] px-3 py-3 text-sm font-semibold text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white transition shadow-sm"
+                className="flex items-center justify-center gap-2 rounded-xl bg-[#1D1D1D] px-3 py-3 text-sm font-semibold text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white transition shadow-sm w-full"
               >
                 {dict.nav.cta}
               </Link>
