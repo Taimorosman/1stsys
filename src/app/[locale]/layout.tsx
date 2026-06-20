@@ -80,7 +80,7 @@ export default async function LocaleLayout(props: {
       className={`${plusJakartaSans.variable} ${syne.variable} ${plexArabic.variable}`}
       suppressHydrationWarning
     >
-      <body>
+      <body suppressHydrationWarning>
         <MouseParallax />
         <Header locale={typedLocale} dict={dict} />
         <main>{props.children}</main>
