@@ -60,7 +60,15 @@ export default async function HomePage(props: {
 
             <div className="lg:col-span-6">
               <div className="animate-fade-in delay-300">
-                <HeroVisual />
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl group animate-float-slow parallax-element">
+                  {/* Outer soft aura glow */}
+                  <div className="absolute -inset-2 rounded-[32px] bg-gradient-to-tr from-[var(--color-accent)]/15 to-[var(--color-accent-2)]/10 blur-xl opacity-75 animate-halo pointer-events-none parallax-glow-1" />
+                  <img
+                    src="/images/anti_gravity_hero.png"
+                    alt={isAr ? "النظام الأول - حلول البناء المبتكرة" : "The First System - Innovative Construction Solutions"}
+                    className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                  />
+                </div>
               </div>
             </div>
           </div>
