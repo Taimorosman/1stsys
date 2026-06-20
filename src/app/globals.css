@@ -352,6 +352,13 @@ select:-webkit-autofill {
   }
 }
 
+/* Invert white blueprint background textures to dark for the light theme */
+.card-bg-blueprint,
+.card-bg-blueprint-stat {
+  filter: invert(1);
+  mix-blend-mode: multiply;
+}
+
 /* --- GLOBAL IMAGE SHADOW RESET --- */
 img, 
 [class*="image"], 
