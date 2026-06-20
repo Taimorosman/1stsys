@@ -274,7 +274,7 @@ export function SampleRequestForm({ dict, variant = "contact" }: Props) {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[var(--color-accent)] px-6 text-sm font-semibold text-black hover:bg-[var(--color-accent-hover)] disabled:opacity-60 transition"
+          className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#1D1D1D] px-6 text-sm font-semibold text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white disabled:opacity-60 transition shadow-sm"
         >
           {status === "sent" ? <Icon name="Check" size={16} /> : <Icon name="Send" size={14} />}
           <span>

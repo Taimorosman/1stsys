@@ -238,7 +238,7 @@ export default async function HomePage(props: {
               backgroundPosition: 'center'
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#07090d]/90 via-[#0c1015]/40 to-transparent pointer-events-none z-0" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-surface-elevated)]/90 via-[var(--color-surface)]/45 to-transparent pointer-events-none z-0" />
           <div className="absolute -end-32 -top-20 w-[400px] h-[400px] rounded-full bg-[var(--color-accent)]/15 blur-3xl pointer-events-none z-0" />
           <div className="relative grid gap-6 md:grid-cols-2 md:items-center z-10">
             <div>

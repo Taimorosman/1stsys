@@ -36,11 +36,11 @@ const sizeClasses: Record<Size, string> = {
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-[var(--color-accent)] text-black hover:bg-[var(--color-accent-hover)] shadow-[0_8px_24px_-8px_rgba(0,189,58,0.45)]",
+    "bg-[#1D1D1D] text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_20px_-8px_rgba(0,189,58,0.3)]",
   secondary:
-    "border border-[var(--color-accent-green)]/40 bg-[var(--color-surface)] text-[var(--color-fg)] hover:border-[var(--color-accent-green-hover)] hover:bg-[var(--color-accent-green-soft)] hover:text-white hover:shadow-[0_8px_20px_-8px_rgba(22,163,74,0.3)]",
+    "border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg)] hover:bg-[#1D1D1D]/5 hover:border-[#1D1D1D]/30 hover:shadow-sm",
   ghost:
-    "text-[var(--color-fg-muted)] hover:text-[var(--color-fg)] hover:bg-[var(--color-surface)]",
+    "text-[var(--color-fg-muted)] hover:text-[var(--color-fg)] hover:bg-[var(--color-surface-elevated)]",
 };
 
 export function Button(props: Props) {

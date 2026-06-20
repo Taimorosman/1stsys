@@ -98,7 +98,7 @@ export function Header({ locale, dict }: Props) {
 
           <Link
             href={`/${locale}/contact`}
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-black hover:bg-[var(--color-accent-hover)] transition"
+            className="hidden md:inline-flex items-center gap-2 rounded-full bg-[#1D1D1D] px-4 py-2 text-sm font-semibold text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white transition shadow-sm"
           >
             {dict.nav.cta}
             <Icon name={locale === "ar" ? "ArrowLeft" : "ArrowRight"} size={14} />
@@ -144,7 +144,7 @@ export function Header({ locale, dict }: Props) {
               </Link>
               <Link
                 href={`/${locale}/contact`}
-                className="flex items-center justify-center gap-2 rounded-xl bg-[var(--color-accent)] px-3 py-3 text-sm font-semibold text-black"
+                className="flex items-center justify-center gap-2 rounded-xl bg-[#1D1D1D] px-3 py-3 text-sm font-semibold text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white transition shadow-sm"
               >
                 {dict.nav.cta}
               </Link>

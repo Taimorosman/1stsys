@@ -18,8 +18,8 @@ export function Section({
     size === "sm"
       ? "py-12 md:py-16"
       : size === "lg"
-        ? "py-24 md:py-32"
-        : "py-20 md:py-24";
+        ? "py-28 md:py-36"
+        : "py-24 md:py-28";
 
   return (
     <Tag className={`relative ${padding} ${className}`} {...rest}>

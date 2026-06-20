@@ -372,7 +372,7 @@ export function CataloguesList({ locale, dict }: Props) {
                 </div>
 
                 {/* 3. SLIDE-UP DETAILS LAYER (Slides up to occupy bottom 200px, leaving top for document preview) */}
-                <div className="catalog-details-layer absolute inset-x-0 bottom-0 h-[200px] bg-gradient-to-t from-[#07090d] via-[#0c1015]/98 to-[#0c1015]/85 backdrop-blur-md border-t border-[var(--color-border)]/40 p-5 z-20 translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0 rounded-b-2xl flex flex-col justify-between">
+                <div className="catalog-details-layer absolute inset-x-0 bottom-0 h-[200px] bg-gradient-to-t from-[var(--color-bg)] via-[var(--color-surface)]/98 to-[var(--color-surface)]/85 backdrop-blur-md border-t border-[var(--color-border)]/40 p-5 z-20 translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0 rounded-b-2xl flex flex-col justify-between">
                   <div>
                     <span className="inline-block rounded-full bg-[var(--color-accent-soft)] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[var(--color-accent)] mb-2">
                       {getCategoryLabel(item.category)}

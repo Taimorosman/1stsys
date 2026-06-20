@@ -36,7 +36,7 @@ export function PageHero({ eyebrow, title, body, children, bgImage }: Props) {
               {/* Outer soft aura glow */}
               <div className="absolute -inset-2 rounded-[24px] bg-gradient-to-tr from-[var(--color-accent)]/15 to-[var(--color-accent-2)]/10 blur-xl opacity-75 animate-halo pointer-events-none parallax-glow-1" />
               <div className="relative rounded-2xl overflow-hidden border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl aspect-[4/3] md:aspect-[16/10] lg:aspect-[4/3] group animate-float-slow parallax-element">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#07090d]/60 via-transparent to-transparent z-10 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/60 via-transparent to-transparent z-10 pointer-events-none" />
                 <img
                   src={bgImage}
                   alt={typeof title === "string" ? title : "Hero visual"}

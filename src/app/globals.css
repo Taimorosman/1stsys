@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #05070c;
-  --color-surface: #0a0d14;
-  --color-surface-elevated: #10141f;
-  --color-border: rgba(255, 255, 255, 0.05);
-  --color-border-strong: rgba(255, 255, 255, 0.1);
-  --color-fg: #e6ebf2;
-  --color-fg-muted: #95a0b0;
-  --color-fg-subtle: #6b7585;
+  --color-bg: #F9F7F3;
+  --color-surface: #F2EFE9;
+  --color-surface-elevated: #EBE8E0;
+  --color-border: #E5E2DA;
+  --color-border-strong: #D5D1C7;
+  --color-fg: #1D1D1D;
+  --color-fg-muted: #4A4A4A;
+  --color-fg-subtle: #7A7A7A;
   --color-accent: #00bd3a;
   --color-accent-hover: #00d642;
-  --color-accent-soft: rgba(0, 189, 58, 0.12);
+  --color-accent-soft: rgba(0, 189, 58, 0.08);
   --color-accent-2: #8e9aa8; /* Cool silver-gray secondary accent from logo */
-  --color-accent-green: #064e22; /* Rich dark green 800 */
-  --color-accent-green-hover: #00bd3a; /* Logo Green */
-  --color-accent-green-soft: rgba(0, 189, 58, 0.08);
-  --color-accent-green-border: #042a12; /* Dark green 900 */
+  --color-accent-green: #064e22;
+  --color-accent-green-hover: #00bd3a;
+  --color-accent-green-soft: rgba(0, 189, 58, 0.04);
+  --color-accent-green-border: #E5E2DA;
   --color-success: #00bd3a;
   --color-danger: #ef4444;
 
@@ -63,8 +63,8 @@ body {
   font-family: var(--font-sans);
   font-feature-settings: "ss01" on, "cv11" on;
   background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(0, 189, 58, 0.08), transparent 60%),
-    radial-gradient(900px 500px at 0% 30%, rgba(142, 154, 168, 0.06), transparent 60%),
+    radial-gradient(1200px 600px at 80% -10%, rgba(0, 189, 58, 0.04), transparent 60%),
+    radial-gradient(900px 500px at 0% 30%, rgba(142, 154, 168, 0.03), transparent 60%),
     var(--color-bg);
   color: var(--color-fg);
   min-height: 100vh;
@@ -83,8 +83,9 @@ body::before {
   background-image: url("/images/digital_building_wireframe.png");
   background-size: cover;
   background-position: center;
-  opacity: 0.025;
-  mix-blend-mode: screen;
+  opacity: 0.04;
+  filter: invert(1);
+  mix-blend-mode: multiply;
 }
 
 ::selection {
@@ -119,14 +120,14 @@ body::before {
   }
 
   .text-gradient-gold {
-    background: linear-gradient(135deg, #ffffff 0%, #00bd3a 60%, #00601d 100%);
+    background: linear-gradient(135deg, #1d1d1d 0%, #00bd3a 60%, #042a12 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-emerald {
-    background: linear-gradient(135deg, #ffffff 0%, #10b981 60%, #064e3b 100%);
+    background: linear-gradient(135deg, #1d1d1d 0%, #10b981 60%, #064e3b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -140,9 +141,9 @@ body::before {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    opacity: 0.04;
+    opacity: 0.02;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    mix-blend-mode: overlay;
+    mix-blend-mode: multiply;
   }
 
   .gradient-divider {
@@ -157,18 +158,19 @@ body::before {
   }
 
   .ring-accent-soft {
-    box-shadow: 0 0 0 1px rgba(0, 189, 58, 0.2);
+    box-shadow: 0 0 0 1px rgba(0, 189, 58, 0.15);
   }
 
   .glass {
     background: linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.03),
-      rgba(255, 255, 255, 0.005)
+      rgba(29, 29, 29, 0.015),
+      rgba(29, 29, 29, 0.003)
     );
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(29, 29, 29, 0.06);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
   }
 
   .hero-grid-bg {
