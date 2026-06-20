@@ -330,6 +330,11 @@ select:-webkit-autofill {
   border-radius: 4px;
 }
 
+.card-bg-blueprint,
+.card-bg-blueprint-stat {
+  filter: invert(1);
+}
+
 @media (hover: none) {
   .card-bg-concrete {
     opacity: 0.35 !important;
@@ -350,13 +355,6 @@ select:-webkit-autofill {
   .catalog-doc-preview {
     opacity: 0.16 !important;
   }
-}
-
-/* Invert white blueprint background textures to dark for the light theme */
-.card-bg-blueprint,
-.card-bg-blueprint-stat {
-  filter: invert(1);
-  mix-blend-mode: multiply;
 }
 
 /* --- GLOBAL IMAGE SHADOW RESET --- */
