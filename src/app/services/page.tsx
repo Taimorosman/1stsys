@@ -6,15 +6,12 @@ import { Section, SectionHeader } from "@/components/Section";
 import { Icon, type IconName } from "@/components/Icon";
 import { SampleRequestForm } from "@/components/SampleRequestForm";
 
-export default async function ServicesPage(props: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await props.params;
-  if (!isLocale(locale)) notFound();
+export default async function ServicesPage() {
+  const locale = "en";
   const dict = getDictionary(locale);
   const t = dict.services;
-  const isAr = locale === "ar";
-  const arrow = isAr ? "ArrowLeft" : "ArrowRight";
+  const isAr = false;
+  const arrow = "ArrowRight";
 
   const getServiceBgImage = (id: string) => {
     switch (id) {

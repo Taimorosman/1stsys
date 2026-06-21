@@ -1,33 +1,24 @@
 import { NextRequest, NextResponse } from "next/server";
-import { defaultLocale, locales } from "./src/i18n/config";
-
-const PUBLIC_FILE = /\.(.*)$/;
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  if (
-    pathname.startsWith("/_next") ||
-    pathname.startsWith("/api") ||
-    pathname.startsWith("/favicon") ||
-    PUBLIC_FILE.test(pathname)
-  ) {
-    return NextResponse.next();
+  // Redirect legacy /en paths to flat root paths for backward compatibility and SEO
+  if (pathname === "/en") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/";
+    return NextResponse.redirect(url, 301);
   }
 
-  const pathnameHasLocale = locales.some(
-    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`),
-  );
+  if (pathname.startsWith("/en/")) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.substring(3); // Remove "/en" prefix
+    return NextResponse.redirect(url, 301);
+  }
 
-  if (pathnameHasLocale) return NextResponse.next();
-
-  const preferred = defaultLocale;
-
-  const url = request.nextUrl.clone();
-  url.pathname = `/${preferred}${pathname === "/" ? "" : pathname}`;
-  return NextResponse.redirect(url);
+  return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/((?!_next|.*\\..*).*)"],
+  matcher: ["/((?!_next|api|favicon|.*\\..*).*)"],
 };

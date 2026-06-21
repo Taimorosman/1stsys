@@ -30,12 +30,12 @@ export function Header({ locale, dict }: Props) {
   }, [pathname]);
 
   const links = [
-    { href: `/${locale}`, label: dict.nav.home, exact: true },
-    { href: `/${locale}/about`, label: dict.nav.about },
-    { href: `/${locale}/services`, label: dict.nav.services },
-    { href: `/${locale}/products`, label: dict.nav.products },
-    { href: `/${locale}/brands`, label: dict.nav.brands },
-    { href: `/${locale}/contact`, label: dict.nav.contact },
+    { href: "/", label: dict.nav.home, exact: true },
+    { href: "/about", label: dict.nav.about },
+    { href: "/services", label: dict.nav.services },
+    { href: "/products", label: dict.nav.products },
+    { href: "/brands", label: dict.nav.brands },
+    { href: "/contact", label: dict.nav.contact },
   ];
 
   const isActive = (href: string, exact?: boolean) => {
@@ -54,7 +54,7 @@ export function Header({ locale, dict }: Props) {
       }`}
     >
       <div className="container-page flex h-16 items-center justify-between gap-6 md:h-20">
-        <Link href={`/${locale}`} className="flex items-center group">
+        <Link href="/" className="flex items-center group">
           <Logo variant="full" size={38} locale={locale} />
         </Link>
 
@@ -84,7 +84,7 @@ export function Header({ locale, dict }: Props) {
 
 
           <Link
-            href={`/${locale}/contact`}
+            href="/contact"
             className="hidden md:inline-flex items-center gap-2 rounded-full bg-[#1D1D1D] px-4 py-2 text-sm font-semibold text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white transition shadow-sm"
           >
             {dict.nav.cta}
@@ -123,7 +123,7 @@ export function Header({ locale, dict }: Props) {
             })}
             <div className="mt-3">
               <Link
-                href={`/${locale}/contact`}
+                href="/contact"
                 className="flex items-center justify-center gap-2 rounded-xl bg-[#1D1D1D] px-3 py-3 text-sm font-semibold text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white transition shadow-sm w-full"
               >
                 {dict.nav.cta}

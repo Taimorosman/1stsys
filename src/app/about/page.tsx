@@ -7,15 +7,12 @@ import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 import { Icon, type IconName } from "@/components/Icon";
 
-export default async function AboutPage(props: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await props.params;
-  if (!isLocale(locale)) notFound();
+export default async function AboutPage() {
+  const locale = "en";
   const dict = getDictionary(locale);
   const t = dict.about;
-  const isAr = locale === "ar";
-  const arrow = isAr ? "ArrowLeft" : "ArrowRight";
+  const isAr = false;
+  const arrow = "ArrowRight";
 
   return (
     <>
@@ -162,10 +159,10 @@ export default async function AboutPage(props: {
               {t.cta.body}
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-              <Button href={`/${locale}/contact`} size="lg" trailingIcon={arrow}>
+              <Button href="/contact" size="lg" trailingIcon={arrow}>
                 {t.cta.primary}
               </Button>
-              <Button href={`/${locale}/products`} variant="secondary" size="lg">
+              <Button href="/products" variant="secondary" size="lg">
                 {t.cta.secondary}
               </Button>
             </div>

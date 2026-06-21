@@ -12,14 +12,14 @@ interface Props {
 
 export function Footer({ locale, dict }: Props) {
   const f = dict.footer;
-  const localePath = (href: string) => `/${locale}${href}`;
+  const localePath = (href: string) => href;
 
   return (
     <footer className="relative mt-24 border-t border-[var(--color-border)] bg-[var(--color-surface)]/40">
       <div className="container-page py-16">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <Link href={`/${locale}`} className="inline-flex items-center">
+            <Link href="/" className="inline-flex items-center">
               <Logo variant="full" size={42} locale={locale} />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-[var(--color-fg-muted)]">

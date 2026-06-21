@@ -6,15 +6,12 @@ import { Section } from "@/components/Section";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 
-export default async function BrandsPage(props: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await props.params;
-  if (!isLocale(locale)) notFound();
+export default async function BrandsPage() {
+  const locale = "en";
   const dict = getDictionary(locale);
   const t = dict.brands;
-  const isAr = locale === "ar";
-  const arrow = isAr ? "ArrowLeft" : "ArrowRight";
+  const isAr = false;
+  const arrow = "ArrowRight";
 
   const getBrandBgImage = (id: string) => {
     switch (id) {
@@ -111,7 +108,7 @@ export default async function BrandsPage(props: {
               {t.cta.body}
             </p>
             <div className="mt-10 flex justify-center">
-              <Button href={`/${locale}/contact`} size="lg" trailingIcon={arrow}>
+              <Button href="/contact" size="lg" trailingIcon={arrow}>
                 {t.cta.primary}
               </Button>
             </div>

@@ -6,11 +6,8 @@ import { Section } from "@/components/Section";
 import { Icon } from "@/components/Icon";
 import { SampleRequestForm } from "@/components/SampleRequestForm";
 
-export default async function ContactPage(props: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await props.params;
-  if (!isLocale(locale)) notFound();
+export default async function ContactPage() {
+  const locale = "en";
   const dict = getDictionary(locale);
   const t = dict.contact;
 

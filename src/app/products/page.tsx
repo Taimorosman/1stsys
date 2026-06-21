@@ -7,15 +7,12 @@ import { Button } from "@/components/Button";
 import { Icon, type IconName } from "@/components/Icon";
 import { CataloguesList } from "@/components/CataloguesList";
 
-export default async function ProductsPage(props: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await props.params;
-  if (!isLocale(locale)) notFound();
+export default async function ProductsPage() {
+  const locale = "en";
   const dict = getDictionary(locale);
   const t = dict.products;
-  const isAr = locale === "ar";
-  const arrow = isAr ? "ArrowLeft" : "ArrowRight";
+  const isAr = false;
+  const arrow = "ArrowRight";
 
   return (
     <>

@@ -25,7 +25,7 @@ export default function NotFound() {
             The page you're looking for doesn't exist.
           </p>
           <Link
-            href="/en"
+            href="/"
             style={{
               display: "inline-block",
               padding: "12px 24px",
