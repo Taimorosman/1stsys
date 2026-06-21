@@ -6,9 +6,13 @@ export const metadata: Metadata = {
   description:
     "Decorative and construction chemicals — exclusive agent for Creative Concrete Concepts in Saudi Arabia. Engineering reliability since 2015.",
   icons: {
-    icon: "/favicon.ico?v=4",
-    shortcut: "/favicon.ico?v=4",
-    apple: "/favicon.ico?v=4",
+    icon: [
+      { url: "/favicon.ico?v=5", type: "image/x-icon" },
+      { url: "/icon.png?v=5", type: "image/png", sizes: "128x128" },
+      { url: "/icon.svg?v=5", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.ico?v=5",
+    apple: "/favicon.ico?v=5",
   },
 };
 
