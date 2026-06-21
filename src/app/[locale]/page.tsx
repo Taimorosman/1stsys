@@ -64,7 +64,7 @@ export default async function HomePage(props: {
                   {/* Outer soft aura glow */}
                   <div className="absolute -inset-2 rounded-[32px] bg-gradient-to-tr from-[var(--color-accent)]/15 to-[var(--color-accent)]/2 blur-xl opacity-75 animate-halo pointer-events-none parallax-glow-1" />
                   <img
-                    src="/images/anti_gravity_hero.png"
+                    src="/images/microcement_hero.png"
                     alt={isAr ? "النظام الأول - حلول البناء المبتكرة" : "The First System - Innovative Construction Solutions"}
                     className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                   />
