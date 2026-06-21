@@ -332,7 +332,7 @@ select:-webkit-autofill {
 
 .card-bg-blueprint,
 .card-bg-blueprint-stat {
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
 }
 
 @media (hover: none) {

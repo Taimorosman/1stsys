@@ -40,7 +40,7 @@ export default async function AboutPage(props: {
               >
                 {/* Digital building blueprint background texture */}
                 <div 
-                  className="card-bg-blueprint-stat absolute inset-0 opacity-[0.03] group-hover/stat:opacity-[0.12] scale-100 group-hover/stat:scale-105 transition-all duration-700 pointer-events-none z-0"
+                  className="card-bg-blueprint-stat absolute inset-0 opacity-[0.08] group-hover/stat:opacity-[0.20] scale-100 group-hover/stat:scale-105 transition-all duration-700 pointer-events-none z-0"
                   style={{
                     backgroundImage: `url(${bgImage})`,
                     backgroundSize: 'cover',
@@ -117,7 +117,7 @@ export default async function AboutPage(props: {
               <Card key={v.title} interactive className="text-center group/card">
                 {/* Digital building blueprint background texture */}
                 <div 
-                  className="card-bg-blueprint absolute inset-0 opacity-[0.03] group-hover/card:opacity-[0.18] scale-100 group-hover/card:scale-108 transition-all duration-700 pointer-events-none z-0"
+                  className="card-bg-blueprint absolute inset-0 opacity-[0.08] group-hover/card:opacity-[0.20] scale-100 group-hover/card:scale-108 transition-all duration-700 pointer-events-none z-0"
                   style={{
                     backgroundImage: `url(${bgImage})`,
                     backgroundSize: 'cover',
