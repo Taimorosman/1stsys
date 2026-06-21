@@ -56,7 +56,7 @@ export default async function ServicesPage(props: {
                   backgroundPosition: 'center'
                 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-surface)] via-[var(--color-surface)]/60 to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none z-0" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-accent-soft)]/30 via-transparent to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none z-0" />
               
               <div className="absolute -end-10 -top-10 w-32 h-32 rounded-full bg-[var(--color-accent)]/0 blur-2xl transition group-hover:bg-[var(--color-accent)]/10 pointer-events-none z-0" />
               

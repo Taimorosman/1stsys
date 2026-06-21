@@ -208,7 +208,7 @@ export default async function HomePage(props: {
                   }}
                 />
                 {/* Legibility protecting gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-surface)] via-[var(--color-surface)]/60 to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none z-0" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-accent-soft)]/30 via-transparent to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none z-0" />
 
                 <div className="relative grid h-11 w-11 place-items-center rounded-xl bg-[var(--color-bg)] text-[var(--color-accent)] transition-all duration-300 group-hover:bg-[var(--color-accent-soft)] group-hover:-translate-y-0.5 z-10">
                   <Icon name={s.icon as IconName} size={18} />
@@ -322,7 +322,7 @@ export default async function HomePage(props: {
                       }}
                     />
                     {/* Legibility protecting gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-surface)] via-[var(--color-surface)]/60 to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none z-0" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-accent-soft)]/30 via-transparent to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none z-0" />
 
                     <div className="text-display text-2xl font-bold text-[var(--color-fg)] transition-colors duration-300 group-hover:text-[var(--color-accent)] z-10 relative">
                       {b.name}
@@ -373,7 +373,7 @@ export default async function HomePage(props: {
                       }}
                     />
                     {/* Legibility protecting gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-surface)] via-[var(--color-surface)]/60 to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none z-0" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-accent-soft)]/30 via-transparent to-transparent opacity-85 group-hover:opacity-75 transition-opacity duration-500 pointer-events-none z-0" />
 
                     <div className="text-display text-2xl font-bold text-[var(--color-fg)] transition-colors duration-300 group-hover:text-[var(--color-accent)] z-10 relative">
                       {b.name}
