@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { isLocale } from "@/i18n/config";
+import { isLocale, Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/getDictionary";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
@@ -7,7 +7,7 @@ import { Icon } from "@/components/Icon";
 import { SampleRequestForm } from "@/components/SampleRequestForm";
 
 export default async function ContactPage() {
-  const locale = "en";
+  let locale: Locale = "en";
   const dict = getDictionary(locale);
   const t = dict.contact;
 
