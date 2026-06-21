@@ -329,7 +329,7 @@ export function CataloguesList({ locale, dict }: Props) {
             return (
               <div
                 key={item.filename}
-                className="group relative h-[330px] overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] border-s-4 border-s-[var(--color-accent)] transition-all duration-500 hover:border-[var(--color-accent)]/40 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
+                className="ui-card group relative h-[330px] overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] border-s-4 border-s-[var(--color-accent)] transition-all duration-500 hover:border-[var(--color-accent)]/40 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
                 style={{ animationDelay: `${idx * 40}ms` }}
               >
                 {/* 1. MOCK DOCUMENT BACKGROUND (Scrolls up on hover) */}
@@ -412,7 +412,7 @@ export function CataloguesList({ locale, dict }: Props) {
         </div>
       ) : (
         /* Empty State */
-        <div className="flex flex-col items-center justify-center rounded-3xl border border-dashed border-[var(--color-border)] bg-[var(--color-surface)] py-16 px-6 text-center">
+        <div className="ui-card flex flex-col items-center justify-center rounded-3xl border border-dashed border-[var(--color-border)] bg-[var(--color-surface)] py-16 px-6 text-center">
           <div className="grid h-14 w-14 place-items-center rounded-2xl bg-[var(--color-bg)] text-[var(--color-fg-subtle)] mb-4">
             <Icon name="FileText" size={24} className="opacity-50" />
           </div>

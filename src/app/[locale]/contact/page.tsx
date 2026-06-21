@@ -44,7 +44,7 @@ export default async function ContactPage(props: {
             {t.offices.map((office, idx) => (
               <article
                 key={idx}
-                className={`relative overflow-hidden rounded-2xl border bg-[var(--color-surface)] p-6 ${
+                className={`ui-card relative overflow-hidden rounded-2xl border bg-[var(--color-surface)] p-6 ${
                   office.type === "headquarters"
                     ? "border-[var(--color-accent)]/30"
                     : "border-[var(--color-border)]"
@@ -130,7 +130,7 @@ export default async function ContactPage(props: {
                     href={getMapLink(office.city)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full sm:w-28 h-36 sm:h-28 shrink-0 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)]/40 relative overflow-hidden group/map transition-all duration-300 hover:border-[var(--color-accent)]/55 hover:shadow-lg hover:shadow-[var(--color-accent)]/5"
+                    className="ui-card block w-full sm:w-28 h-36 sm:h-28 shrink-0 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)]/40 relative overflow-hidden group/map transition-all duration-300 hover:border-[var(--color-accent)]/55 hover:shadow-lg hover:shadow-[var(--color-accent)]/5"
                     title={locale === "ar" ? "افتح الموقع في خرائط جوجل" : "Open location in Google Maps"}
                   >
                     <div className="absolute inset-0 hero-grid-bg opacity-30 pointer-events-none" />
@@ -187,7 +187,7 @@ export default async function ContactPage(props: {
               href={t.whatsapp.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition hover:border-[#25d366]/40 hover:bg-[var(--color-surface-elevated)]"
+              className="ui-card flex items-center gap-4 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition hover:border-[#25d366]/40 hover:bg-[var(--color-surface-elevated)]"
             >
               <div className="grid h-11 w-11 place-items-center rounded-xl bg-[#25d366]/10 text-[#25d366]">
                 <Icon name="MessageCircle" size={20} />
@@ -229,7 +229,7 @@ export default async function ContactPage(props: {
             </p>
 
             <div className="mt-8 grid grid-cols-3 gap-4">
-              <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
+              <div className="ui-card rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
                 <Icon
                   name="Truck"
                   size={20}
@@ -240,7 +240,7 @@ export default async function ContactPage(props: {
                   {locale === "ar" ? "تسليم سريع" : "Express delivery"}
                 </div>
               </div>
-              <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
+              <div className="ui-card rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
                 <Icon
                   name="Building"
                   size={20}
@@ -251,7 +251,7 @@ export default async function ContactPage(props: {
                   {locale === "ar" ? "مكاتب إقليمية" : "Regional offices"}
                 </div>
               </div>
-              <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
+              <div className="ui-card rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
                 <Icon
                   name="Globe"
                   size={20}
@@ -266,7 +266,7 @@ export default async function ContactPage(props: {
           </div>
 
           {/* SVG MAP */}
-          <div className="relative h-80 md:h-96 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
+          <div className="ui-card relative h-80 md:h-96 rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
             <div className="absolute inset-0 hero-grid-bg pointer-events-none" />
             <svg
               viewBox="0 0 400 400"

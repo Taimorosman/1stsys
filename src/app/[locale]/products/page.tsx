@@ -55,7 +55,7 @@ export default async function ProductsPage(props: {
             return (
               <div
                 key={cat.id}
-                className={`group relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-7 transition-all duration-300 hover:border-[var(--color-accent-green)]/60 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent-green)]/5 ${
+                className={`ui-card group relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-7 transition-all duration-300 hover:border-[var(--color-accent-green)]/60 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent-green)]/5 ${
                   idx === 0 ? "lg:col-span-2 lg:row-span-2" : ""
                 }`}
               >

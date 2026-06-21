@@ -44,7 +44,7 @@ export default async function BrandsPage(props: {
           {t.items.map((b) => (
             <article
               key={b.id}
-              className={`group relative overflow-hidden rounded-2xl border p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
+              className={`ui-card group relative overflow-hidden rounded-2xl border p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
                 b.exclusive
                   ? "border-[var(--color-accent)]/30 bg-gradient-to-br from-[var(--color-surface)] via-[var(--color-surface)] to-[var(--color-accent-soft)]/20 hover:border-[var(--color-accent)]/60 hover:shadow-[var(--color-accent)]/5"
                   : "border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-accent-green)]/60 hover:shadow-[var(--color-accent-green)]/5"
@@ -92,7 +92,7 @@ export default async function BrandsPage(props: {
       </Section>
 
       <Section size="md">
-        <div className="relative overflow-hidden rounded-3xl border border-[var(--color-accent-green)]/30 bg-[var(--color-surface)] p-8 md:p-14 text-center group">
+        <div className="ui-card relative overflow-hidden rounded-3xl border border-[var(--color-accent-green)]/30 bg-[var(--color-surface)] p-8 md:p-14 text-center group">
           <div 
             className="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] scale-100 group-hover:scale-105 transition-all duration-1000 pointer-events-none z-0"
             style={{

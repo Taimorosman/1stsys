@@ -109,7 +109,7 @@ export function SampleRequestForm({ dict, variant = "contact" }: Props) {
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 md:p-8"
+      className="ui-card rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 md:p-8"
     >
       <div className="mb-6">
         <h3 className="text-display text-2xl font-medium md:text-3xl">{config.title}</h3>

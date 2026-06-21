@@ -7,7 +7,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 export function Card({ interactive = false, className = "", children, ...rest }: Props) {
   return (
     <div
-      className={`relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-all duration-300 ${
+      className={`ui-card relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-all duration-300 ${
         interactive
           ? "hover:border-[var(--color-accent)]/30 hover:bg-[var(--color-surface-elevated)] hover:-translate-y-0.5"
           : ""

@@ -60,7 +60,7 @@ export default async function HomePage(props: {
 
             <div className="lg:col-span-6">
               <div className="animate-fade-in delay-300">
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl group animate-float-slow parallax-element">
+                <div className="ui-card relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl group animate-float-slow parallax-element">
                   {/* Outer soft aura glow */}
                   <div className="absolute -inset-2 rounded-[32px] bg-gradient-to-tr from-[var(--color-accent)]/15 to-[var(--color-accent-2)]/10 blur-xl opacity-75 animate-halo pointer-events-none parallax-glow-1" />
                   <img
@@ -196,7 +196,7 @@ export default async function HomePage(props: {
               <a
                 href={`/${locale}/services`}
                 key={s.id}
-                className="group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
+                className="ui-card group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
               >
                 {/* Dynamic Background Image Texture - Visible by default, scales and clears on hover */}
                 <div 
@@ -237,7 +237,7 @@ export default async function HomePage(props: {
 
       {/* SAMPLE CTA */}
       <Section size="md">
-        <div className="relative overflow-hidden rounded-3xl border border-[var(--color-accent-green)]/30 bg-gradient-to-br from-[var(--color-surface-elevated)] to-[var(--color-surface)] p-8 md:p-14 group">
+        <div className="ui-card relative overflow-hidden rounded-3xl border border-[var(--color-accent-green)]/30 bg-gradient-to-br from-[var(--color-surface-elevated)] to-[var(--color-surface)] p-8 md:p-14 group">
           <div 
             className="absolute inset-0 opacity-[0.04] group-hover:opacity-[0.07] scale-100 group-hover:scale-105 transition-all duration-1000 pointer-events-none z-0"
             style={{
@@ -309,7 +309,7 @@ export default async function HomePage(props: {
                 return (
                   <div
                     key={b.id}
-                    className="group relative overflow-hidden flex flex-col items-center justify-center gap-2 border border-[var(--color-border)] bg-[var(--color-surface)] py-12 px-6 w-72 h-52 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
+                    className="ui-card group relative overflow-hidden flex flex-col items-center justify-center gap-2 border border-[var(--color-border)] bg-[var(--color-surface)] py-12 px-6 w-72 h-52 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
                     style={{ borderRadius: '0 50% 0 50%' }}
                   >
                     {/* Background texture - visible by default, scales and clears on hover */}
@@ -360,7 +360,7 @@ export default async function HomePage(props: {
                 return (
                   <div
                     key={`${b.id}-dup`}
-                    className="group relative overflow-hidden flex flex-col items-center justify-center gap-2 border border-[var(--color-border)] bg-[var(--color-surface)] py-12 px-6 w-72 h-52 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
+                    className="ui-card group relative overflow-hidden flex flex-col items-center justify-center gap-2 border border-[var(--color-border)] bg-[var(--color-surface)] py-12 px-6 w-72 h-52 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
                     style={{ borderRadius: '0 50% 0 50%' }}
                   >
                     {/* Background texture - visible by default, scales and clears on hover */}
@@ -391,7 +391,7 @@ export default async function HomePage(props: {
 
       {/* NEWSLETTER */}
       <Section size="md">
-        <div className="relative overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] p-8 md:p-12 group">
+        <div className="ui-card relative overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] p-8 md:p-12 group">
           <div 
             className="absolute inset-0 opacity-[0.03] scale-100 transition-all duration-1000 pointer-events-none z-0"
             style={{

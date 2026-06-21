@@ -36,7 +36,7 @@ export default async function AboutPage(props: {
             return (
               <div
                 key={i}
-                className="group/stat relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6"
+                className="ui-card group/stat relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6"
               >
                 {/* Digital building blueprint background texture */}
                 <div 
@@ -76,7 +76,7 @@ export default async function AboutPage(props: {
             <div className="relative mt-8">
               {/* Outer soft aura glow */}
               <div className="absolute -inset-2 rounded-[24px] bg-gradient-to-tr from-[var(--color-accent)]/15 to-[var(--color-accent-2)]/10 blur-xl opacity-75 animate-halo pointer-events-none parallax-glow-1" />
-              <div className="relative rounded-2xl overflow-hidden border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl aspect-[4/3] group animate-float-slow parallax-element">
+              <div className="ui-card relative rounded-2xl overflow-hidden border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl aspect-[4/3] group animate-float-slow parallax-element">
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/60 via-transparent to-transparent z-10 pointer-events-none" />
                 <img
                   src="/images/concrete_construction.png"
@@ -143,7 +143,7 @@ export default async function AboutPage(props: {
 
       {/* CTA */}
       <Section size="md">
-        <div className="relative overflow-hidden rounded-3xl border border-[var(--color-accent-green)]/30 bg-[var(--color-surface)] p-8 md:p-14 text-center group">
+        <div className="ui-card relative overflow-hidden rounded-3xl border border-[var(--color-accent-green)]/30 bg-[var(--color-surface)] p-8 md:p-14 text-center group">
           <div 
             className="absolute inset-0 opacity-[0.03] group-hover:opacity-[0.06] scale-100 group-hover:scale-105 transition-all duration-1000 pointer-events-none z-0"
             style={{
