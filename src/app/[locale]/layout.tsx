@@ -49,9 +49,9 @@ export async function generateMetadata(props: {
     title,
     description,
     icons: {
-      icon: "/favicon.ico",
-      shortcut: "/favicon.ico",
-      apple: "/favicon.ico",
+      icon: "/favicon.ico?v=4",
+      shortcut: "/favicon.ico?v=4",
+      apple: "/favicon.ico?v=4",
     },
     alternates: {
       languages: {
