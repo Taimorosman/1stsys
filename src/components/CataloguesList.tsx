@@ -70,47 +70,17 @@ export function CataloguesList({ locale, dict }: Props) {
   };
 
   const getCoverBgImage = (filename: string, category: string) => {
-    const fn = filename.toLowerCase();
-    
-    // 1. Specific matches based on filename contents
-    if (fn.includes("terrazzo")) {
-      return "/images/terrazzo_floor.png";
-    }
-    if (
-      fn.includes("exposed aggregate") ||
-      fn.includes("deco aggregates") ||
-      fn.includes("expose concrete")
-    ) {
-      return "/images/exposed_aggregate.png";
-    }
-    if (fn.includes("stamped concrete") || fn.includes("texturing mats")) {
-      return "/images/stamped_concrete.png";
-    }
-    if (fn.includes("color chart") || fn.includes("color chart inside") || fn.includes("chemstain")) {
-      return "/images/terrazzo_floor.png";
-    }
-    if (fn.includes("construction chemicals")) {
-      return "/images/value_innovation.png";
-    }
-    if (fn.includes("insucrete")) {
-      return "/images/concrete_construction.png";
-    }
-    if (fn.includes("topcrete 601")) {
-      return "/images/concrete_construction.png";
-    }
-    
-    // 2. Category-based fallbacks for general files
     switch (category) {
       case "ccc":
-        return "/images/stat_systems.png";
+        return "/images/prod_cover_ccc.png";
       case "pavecrete":
-        return "/images/stamped_concrete.png";
+        return "/images/prod_cover_pavecrete.png";
       case "topcrete":
-        return "/images/polished_concrete.png";
+        return "/images/prod_cover_topcrete.png";
       case "specialized":
-        return "/images/value_innovation.png";
+        return "/images/prod_cover_specialized.png";
       default:
-        return "/images/polished_concrete.png";
+        return "/images/prod_cover_topcrete.png";
     }
   };
 
@@ -370,7 +340,8 @@ export function CataloguesList({ locale, dict }: Props) {
                   style={{
                     backgroundImage: `linear-gradient(to bottom, rgba(249, 247, 243, 0.55), rgba(249, 247, 243, 0.85)), url(${getCoverBgImage(item.filename, item.category)})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center'
+                    backgroundPosition: `${(idx * 23) % 100}% ${(idx * 37) % 100}%`,
+                    transform: `scale(${1.0 + (idx % 3) * 0.05}) rotate(${(idx % 2 === 0 ? 1 : -1) * (idx % 4) * 0.4}deg)`,
                   }}
                 >
                   {/* Header */}
