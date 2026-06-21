@@ -99,7 +99,7 @@ export default async function ServicesPage(props: {
               "process_supply.png",
               "process_support.png"
             ];
-            const bgImage = `/images/${processImages[idx] || "digital_building_wireframe.png"}`;
+            const bgImage = `/images/${processImages[idx] || "digital_building_wireframe.png"}?v=4`;
 
             return (
               <div

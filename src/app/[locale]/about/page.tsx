@@ -31,7 +31,7 @@ export default async function AboutPage(props: {
               "stat_projects.png",
               "stat_exclusive.png"
             ];
-            const bgImage = `/images/${statImages[i] || "digital_building_wireframe.png"}`;
+            const bgImage = `/images/${statImages[i] || "digital_building_wireframe.png"}?v=4`;
 
             return (
               <div
@@ -111,7 +111,7 @@ export default async function AboutPage(props: {
               "value_commitment.png",
               "value_customer_focus.png"
             ];
-            const bgImage = `/images/${valueImages[idx] || "digital_building_wireframe.png"}`;
+            const bgImage = `/images/${valueImages[idx] || "digital_building_wireframe.png"}?v=4`;
 
             return (
               <Card key={v.title} interactive className="text-center group/card">

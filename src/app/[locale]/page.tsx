@@ -125,7 +125,7 @@ export default async function HomePage(props: {
                   "value_commitment.png",
                   "value_customer_focus.png"
                 ];
-                const bgImage = `/images/${valueImages[idx] || "digital_building_wireframe.png"}`;
+                const bgImage = `/images/${valueImages[idx] || "digital_building_wireframe.png"}?v=4`;
 
                 return (
                   <Card
@@ -135,7 +135,7 @@ export default async function HomePage(props: {
                   >
                     {/* Digital building blueprint background texture */}
                     <div 
-                      className="card-bg-blueprint absolute inset-0 opacity-[0.03] group-hover/card:opacity-[0.18] scale-100 group-hover/card:scale-108 transition-all duration-700 pointer-events-none z-0"
+                      className="card-bg-blueprint absolute inset-0 opacity-[0.08] group-hover/card:opacity-[0.20] scale-100 group-hover/card:scale-108 transition-all duration-700 pointer-events-none z-0"
                       style={{
                         backgroundImage: `url(${bgImage})`,
                         backgroundSize: 'cover',
