@@ -70,6 +70,26 @@ export function CataloguesList({ locale, dict }: Props) {
   };
 
   const getCoverBgImage = (filename: string, category: string) => {
+    const file = filename.toLowerCase();
+
+    // Specific product/document matches for highly relevant images
+    if (file.includes("terrazzo")) {
+      return "/images/terrazzo_floor.png";
+    }
+    if (file.includes("expose") || file.includes("aggregate")) {
+      return "/images/exposed_aggregate.png";
+    }
+    if (file.includes("stamped") || file.includes("mats") || file.includes("chemstain")) {
+      return "/images/stamped_concrete.png";
+    }
+    if (file.includes("hardener") || file.includes("leveling") || file.includes("sealer")) {
+      return "/images/polished_concrete.png";
+    }
+    if (file.includes("construction") || file.includes("screed") || file.includes("overlay")) {
+      return "/images/concrete_construction.png";
+    }
+
+    // Category fallbacks
     switch (category) {
       case "ccc":
         return "/images/prod_cover_ccc.png";
@@ -338,7 +358,7 @@ export function CataloguesList({ locale, dict }: Props) {
                 <div 
                   className="catalog-cover-layer absolute inset-0 flex flex-col justify-between p-6 transition-all duration-500 z-10 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none"
                   style={{
-                    backgroundImage: `linear-gradient(to bottom, rgba(249, 247, 243, 0.55), rgba(249, 247, 243, 0.85)), url(${getCoverBgImage(item.filename, item.category)})`,
+                    backgroundImage: `linear-gradient(to bottom, rgba(249, 247, 243, 0.55), rgba(249, 247, 243, 0.85)), url(${getCoverBgImage(item.filename, item.category)}?v=4)`,
                     backgroundSize: 'cover',
                     backgroundPosition: `${(idx * 23) % 100}% ${(idx * 37) % 100}%`,
                     transform: `scale(${1.0 + (idx % 3) * 0.05}) rotate(${(idx % 2 === 0 ? 1 : -1) * (idx % 4) * 0.4}deg)`,
