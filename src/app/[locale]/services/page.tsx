@@ -17,22 +17,30 @@ export default async function ServicesPage(props: {
   const arrow = isAr ? "ArrowLeft" : "ArrowRight";
 
   const getServiceBgImage = (id: string) => {
-    if (id === "flooring" || id === "epoxy" || id === "pu") {
-      return "/images/polished_concrete.png";
+    switch (id) {
+      case "adhesives":
+        return "/images/stamped_concrete.png";
+      case "flooring":
+        return "/images/polished_concrete.png";
+      case "epoxy":
+        return "/images/microcement_hero.png";
+      case "pu":
+        return "/images/products_hero.png";
+      case "concrete-repair":
+        return "/images/concrete_construction.png";
+      case "protection":
+        return "/images/services_hero.png";
+      case "insulation":
+        return "/images/about_hero.png";
+      case "joint-fillers":
+        return "/images/contact_hero.png";
+      case "finishing":
+        return "/images/terrazzo_floor.png";
+      case "raw-materials":
+        return "/images/exposed_aggregate.png";
+      default:
+        return "/images/polished_concrete.png";
     }
-    if (id === "raw-materials") {
-      return "/images/exposed_aggregate.png";
-    }
-    if (id === "finishing") {
-      return "/images/terrazzo_floor.png";
-    }
-    if (id === "concrete-repair" || id === "insulation") {
-      return "/images/concrete_construction.png";
-    }
-    if (id === "adhesives" || id === "joint-fillers") {
-      return "/images/stamped_concrete.png";
-    }
-    return "/images/polished_concrete.png"; // fallback
   };
 
   return (
@@ -51,7 +59,7 @@ export default async function ServicesPage(props: {
               <div 
                 className="card-bg-concrete absolute inset-0 opacity-30 scale-100 group-hover:opacity-65 group-hover:scale-110 transition-all duration-500 ease-out pointer-events-none z-0"
                 style={{
-                  backgroundImage: `url(${getServiceBgImage(s.id)})`,
+                  backgroundImage: `url(${getServiceBgImage(s.id)}?v=4)`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}
