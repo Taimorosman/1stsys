@@ -69,8 +69,10 @@ export function CataloguesList({ locale, dict }: Props) {
     }
   };
 
-  const getCoverBgImage = (filename: string) => {
+  const getCoverBgImage = (filename: string, category: string) => {
     const fn = filename.toLowerCase();
+    
+    // 1. Specific matches based on filename contents
     if (fn.includes("terrazzo")) {
       return "/images/terrazzo_floor.png";
     }
@@ -84,7 +86,32 @@ export function CataloguesList({ locale, dict }: Props) {
     if (fn.includes("stamped concrete") || fn.includes("texturing mats")) {
       return "/images/stamped_concrete.png";
     }
-    return "/images/polished_concrete.png";
+    if (fn.includes("color chart") || fn.includes("color chart inside") || fn.includes("chemstain")) {
+      return "/images/terrazzo_floor.png";
+    }
+    if (fn.includes("construction chemicals")) {
+      return "/images/value_innovation.png";
+    }
+    if (fn.includes("insucrete")) {
+      return "/images/concrete_construction.png";
+    }
+    if (fn.includes("topcrete 601")) {
+      return "/images/concrete_construction.png";
+    }
+    
+    // 2. Category-based fallbacks for general files
+    switch (category) {
+      case "ccc":
+        return "/images/stat_systems.png";
+      case "pavecrete":
+        return "/images/stamped_concrete.png";
+      case "topcrete":
+        return "/images/polished_concrete.png";
+      case "specialized":
+        return "/images/value_innovation.png";
+      default:
+        return "/images/polished_concrete.png";
+    }
   };
 
   const renderDocPreview = (item: CatalogueItem) => {
@@ -341,7 +368,7 @@ export function CataloguesList({ locale, dict }: Props) {
                 <div 
                   className="catalog-cover-layer absolute inset-0 flex flex-col justify-between p-6 transition-all duration-500 z-10 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none"
                   style={{
-                    backgroundImage: `linear-gradient(to bottom, rgba(249, 247, 243, 0.55), rgba(249, 247, 243, 0.85)), url(${getCoverBgImage(item.filename)})`,
+                    backgroundImage: `linear-gradient(to bottom, rgba(249, 247, 243, 0.55), rgba(249, 247, 243, 0.85)), url(${getCoverBgImage(item.filename, item.category)})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
