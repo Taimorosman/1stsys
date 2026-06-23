@@ -170,22 +170,30 @@ export default async function HomePage() {
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {dict.services.items.map((s) => {
             const getServiceBgImage = (id: string) => {
-              if (id === "flooring" || id === "epoxy" || id === "pu") {
-                return "/images/polished_concrete.png";
+              switch (id) {
+                case "adhesives":
+                  return "/images/adhesives_grouts.png";
+                case "flooring":
+                  return "/images/flooring_systems.png";
+                case "epoxy":
+                  return "/images/epoxy_systems.png";
+                case "pu":
+                  return "/images/polyurethane.png";
+                case "concrete-repair":
+                  return "/images/concrete_repair.png";
+                case "protection":
+                  return "/images/concrete_protection.png";
+                case "insulation":
+                  return "/images/insulation.png";
+                case "joint-fillers":
+                  return "/images/joint_fillers.png";
+                case "finishing":
+                  return "/images/finishing_materials.png";
+                case "raw-materials":
+                  return "/images/raw_materials.png";
+                default:
+                  return "/images/flooring_systems.png";
               }
-              if (id === "raw-materials") {
-                return "/images/exposed_aggregate.png";
-              }
-              if (id === "finishing") {
-                return "/images/terrazzo_floor.png";
-              }
-              if (id === "concrete-repair" || id === "insulation") {
-                return "/images/concrete_construction.png";
-              }
-              if (id === "adhesives" || id === "joint-fillers") {
-                return "/images/stamped_concrete.png";
-              }
-              return "/images/polished_concrete.png";
             };
 
             return (

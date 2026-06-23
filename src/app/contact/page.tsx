@@ -7,7 +7,8 @@ import { Icon } from "@/components/Icon";
 import { SampleRequestForm } from "@/components/SampleRequestForm";
 
 export default async function ContactPage() {
-  let locale: Locale = "en";
+  const locale: Locale = "en";
+  const isAr = (locale as string) === "ar";
   const dict = getDictionary(locale);
   const t = dict.contact;
 
@@ -128,7 +129,7 @@ export default async function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="ui-card block w-full sm:w-28 h-36 sm:h-28 shrink-0 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)]/40 relative overflow-hidden group/map transition-all duration-300 hover:border-[var(--color-accent)]/55 hover:shadow-lg hover:shadow-[var(--color-accent)]/5"
-                    title={locale === "ar" ? "افتح الموقع في خرائط جوجل" : "Open location in Google Maps"}
+                    title={isAr ? "افتح الموقع في خرائط جوجل" : "Open location in Google Maps"}
                   >
                     <div className="absolute inset-0 hero-grid-bg opacity-30 pointer-events-none" />
                     <svg viewBox="0 0 400 400" className="w-full h-full transition-transform duration-500 group-hover/map:scale-105" fill="none">
@@ -196,7 +197,7 @@ export default async function ContactPage() {
                 </div>
               </div>
               <Icon
-                name={locale === "ar" ? "ArrowLeft" : "ArrowRight"}
+                name={isAr ? "ArrowLeft" : "ArrowRight"}
                 size={16}
                 className="text-[var(--color-fg-subtle)]"
               />
@@ -216,7 +217,7 @@ export default async function ContactPage() {
           <div>
             <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
               <span className="h-px w-6 bg-[var(--color-accent)]" />
-              {locale === "ar" ? "خريطة الحضور" : "Coverage Map"}
+              {isAr ? "خريطة الحضور" : "Coverage Map"}
             </span>
             <h2 className="text-display mt-4 text-3xl font-medium md:text-5xl">
               {t.network.title}
@@ -234,7 +235,7 @@ export default async function ContactPage() {
                 />
                 <div className="mt-3 text-2xl font-semibold">24h</div>
                 <div className="text-xs text-[var(--color-fg-muted)]">
-                  {locale === "ar" ? "تسليم سريع" : "Express delivery"}
+                  {isAr ? "تسليم سريع" : "Express delivery"}
                 </div>
               </div>
               <div className="ui-card rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
@@ -245,7 +246,7 @@ export default async function ContactPage() {
                 />
                 <div className="mt-3 text-2xl font-semibold">3</div>
                 <div className="text-xs text-[var(--color-fg-muted)]">
-                  {locale === "ar" ? "مكاتب إقليمية" : "Regional offices"}
+                  {isAr ? "مكاتب إقليمية" : "Regional offices"}
                 </div>
               </div>
               <div className="ui-card rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
@@ -256,7 +257,7 @@ export default async function ContactPage() {
                 />
                 <div className="mt-3 text-2xl font-semibold">KSA</div>
                 <div className="text-xs text-[var(--color-fg-muted)]">
-                  {locale === "ar" ? "تغطية وطنية" : "Nationwide"}
+                  {isAr ? "تغطية وطنية" : "Nationwide"}
                 </div>
               </div>
             </div>

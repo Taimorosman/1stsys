@@ -16,27 +16,27 @@ export default async function ServicesPage() {
   const getServiceBgImage = (id: string) => {
     switch (id) {
       case "adhesives":
-        return "/images/stamped_concrete.png";
+        return "/images/adhesives_grouts.png";
       case "flooring":
-        return "/images/polished_concrete.png";
+        return "/images/flooring_systems.png";
       case "epoxy":
-        return "/images/microcement_hero.png";
+        return "/images/epoxy_systems.png";
       case "pu":
-        return "/images/products_hero.png";
+        return "/images/polyurethane.png";
       case "concrete-repair":
-        return "/images/concrete_construction.png";
+        return "/images/concrete_repair.png";
       case "protection":
-        return "/images/services_hero.png";
+        return "/images/concrete_protection.png";
       case "insulation":
-        return "/images/about_hero.png";
+        return "/images/insulation.png";
       case "joint-fillers":
-        return "/images/contact_hero.png";
+        return "/images/joint_fillers.png";
       case "finishing":
-        return "/images/terrazzo_floor.png";
+        return "/images/finishing_materials.png";
       case "raw-materials":
-        return "/images/exposed_aggregate.png";
+        return "/images/raw_materials.png";
       default:
-        return "/images/polished_concrete.png";
+        return "/images/flooring_systems.png";
     }
   };
 

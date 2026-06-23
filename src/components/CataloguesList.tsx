@@ -72,35 +72,74 @@ export function CataloguesList({ locale, dict }: Props) {
   const getCoverBgImage = (filename: string, category: string) => {
     const file = filename.toLowerCase();
 
-    // Specific product/document matches for highly relevant images
+    // Map each specific catalog/guide file to a unique, non-repeating image
+    if (file.includes("construction chemicals")) {
+      return "/images/cat_ccc_chemicals.png";
+    }
+    if (file.includes("product list")) {
+      return "/images/cat_ccc_product_list.png";
+    }
+    if (file.includes("mats guide")) {
+      return "/images/cat_ccc_mats_guide.png";
+    }
+    if (file.includes("deco aggregates")) {
+      return "/images/cat_ccc_deco_aggregates.png";
+    }
     if (file.includes("terrazzo")) {
-      return "/images/terrazzo_floor.png";
+      return "/images/cat_crystaltop_terrazzo.png";
     }
-    if (file.includes("expose") || file.includes("aggregate")) {
-      return "/images/exposed_aggregate.png";
-    }
-    if (file.includes("stamped") || file.includes("mats") || file.includes("chemstain")) {
+    if (file.includes("stamped concrete")) {
       return "/images/stamped_concrete.png";
     }
-    if (file.includes("hardener") || file.includes("leveling") || file.includes("sealer")) {
+    if (file.includes("exposed aggregate concrete")) {
+      return "/images/cat_pavecrete_exposed.png";
+    }
+    if (file.includes("700 micro expose")) {
+      return "/images/exposed_aggregate.png";
+    }
+    if (file.includes("colored concrete")) {
+      return "/images/prod_cover_pavecrete.png";
+    }
+    if (file.includes("topcrete 220")) {
       return "/images/polished_concrete.png";
     }
-    if (file.includes("construction") || file.includes("screed") || file.includes("overlay")) {
-      return "/images/concrete_construction.png";
+    if (file.includes("topcrete 601")) {
+      return "/images/concrete_repair.png";
+    }
+    if (file.includes("topcrete 700")) {
+      return "/images/flooring_systems.png";
+    }
+    if (file.includes("topcrete 711")) {
+      return "/images/epoxy_systems.png";
+    }
+    if (file.includes("topcrete 720")) {
+      return "/images/prod_cover_topcrete.png";
+    }
+    if (file.includes("artcrete 801")) {
+      return "/images/concrete_protection.png";
+    }
+    if (file.includes("insucrete st")) {
+      return "/images/insulation.png";
+    }
+    if (file.includes("chemstain")) {
+      return "/images/finishing_materials.png";
+    }
+    if (file.includes("standard color chart")) {
+      return "/images/microcement_hero.png";
     }
 
-    // Category fallbacks
+    // Fallbacks if new files are added in the future
     switch (category) {
       case "ccc":
-        return "/images/prod_cover_ccc.png";
+        return "/images/cat_ccc_chemicals.png";
       case "pavecrete":
-        return "/images/prod_cover_pavecrete.png";
+        return "/images/cat_pavecrete_exposed.png";
       case "topcrete":
-        return "/images/prod_cover_topcrete.png";
+        return "/images/flooring_systems.png";
       case "specialized":
-        return "/images/prod_cover_specialized.png";
+        return "/images/concrete_protection.png";
       default:
-        return "/images/prod_cover_topcrete.png";
+        return "/images/flooring_systems.png";
     }
   };
 
