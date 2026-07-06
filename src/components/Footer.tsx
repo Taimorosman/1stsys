@@ -20,7 +20,7 @@ export function Footer({ locale, dict }: Props) {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
             <Link href="/" className="inline-flex items-center">
-              <Logo variant="full" size={42} locale={locale} />
+              <Logo variant="full" size={58} locale={locale} />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-[var(--color-fg-muted)]">
               {f.tagline}

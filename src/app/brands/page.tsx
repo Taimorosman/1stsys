@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
+import Link from "next/link";
 
 export default async function BrandsPage() {
   const locale = "en";
@@ -32,6 +33,25 @@ export default async function BrandsPage() {
     }
   };
 
+  const getBrandCategory = (id: string) => {
+    switch (id) {
+      case "ccc":
+        return "ccc";
+      case "rapidset":
+        return "topcrete";
+      case "flake":
+        return "topcrete";
+      case "bricform":
+        return "pavecrete";
+      case "lythic":
+        return "specialized";
+      case "day1":
+        return "specialized";
+      default:
+        return "all";
+    }
+  };
+
   return (
     <>
       <PageHero eyebrow={t.hero.eyebrow} title={t.hero.title} body={t.hero.body} bgImage="/images/brands_hero.png" />
@@ -39,9 +59,10 @@ export default async function BrandsPage() {
       <Section size="md">
         <div className="grid gap-5 md:grid-cols-2">
           {t.items.map((b) => (
-            <article
+            <Link
               key={b.id}
-              className={`ui-card group relative overflow-hidden rounded-2xl border p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
+              href={`/products?category=${getBrandCategory(b.id)}`}
+              className={`ui-card block group relative overflow-hidden rounded-2xl border p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
                 b.exclusive
                   ? "border-[var(--color-accent)]/30 bg-gradient-to-br from-[var(--color-surface)] via-[var(--color-surface)] to-[var(--color-accent-soft)]/20 hover:border-[var(--color-accent)]/60 hover:shadow-[var(--color-accent)]/5"
                   : "border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-accent-green)]/60 hover:shadow-[var(--color-accent-green)]/5"
@@ -83,7 +104,7 @@ export default async function BrandsPage() {
                   {b.description}
                 </p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </Section>

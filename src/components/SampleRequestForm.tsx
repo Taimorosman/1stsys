@@ -54,6 +54,19 @@ export function SampleRequestForm({ dict, variant = "contact" }: Props) {
     imageFile: null,
   });
 
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const service = params.get("service");
+      if (service) {
+        setState((s) => ({
+          ...s,
+          materialsSystem: `Inquiry about: ${decodeURIComponent(service)}`,
+        }));
+      }
+    }
+  }, []);
+
   const [imagePreviewUrl, setImagePreviewUrl] = React.useState<string | null>(null);
   const [status, setStatus] = React.useState<"idle" | "sending" | "sent" | "error">("idle");
 

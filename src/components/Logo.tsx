@@ -1,7 +1,7 @@
 import * as React from "react";
 
 export function Logo({
-  size = 32,
+  size = 42,
   variant = "icon",
   locale = "en",
   className = "",

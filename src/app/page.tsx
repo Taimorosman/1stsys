@@ -7,6 +7,7 @@ import { Card } from "@/components/Card";
 import { Icon, type IconName } from "@/components/Icon";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { InteractiveHero } from "@/components/InteractiveHero";
+import Link from "next/link";
 
 export default async function HomePage() {
   const locale = "en";
@@ -60,10 +61,6 @@ export default async function HomePage() {
                 <InteractiveHero
                   isAr={isAr}
                   altText={isAr ? "النظام الأول - حلول البناء المبتكرة" : "The First System - Innovative Construction Solutions"}
-                  badgeText1={isAr ? "مظهر سلس بلون أوف وايت" : "Seamless Off-White"}
-                  badgeSub1={isAr ? "مظهر ساتان ناعم" : "Satin Texture Finish"}
-                  badgeText2={isAr ? "مشاريع راقية بالمملكة" : "Premium KSA Projects"}
-                  badgeSub2={isAr ? "حرفية هندسية عالية" : "100% Handcrafted"}
                 />
               </div>
             </div>
@@ -197,8 +194,8 @@ export default async function HomePage() {
             };
 
             return (
-              <a
-                href="/services"
+              <Link
+                href={`/services#${s.id}`}
                 key={s.id}
                 className="ui-card group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
               >
@@ -227,7 +224,7 @@ export default async function HomePage() {
                     <Icon name={arrowIcon} size={12} />
                   </span>
                 </div>
-              </a>
+              </Link>
             );
           })}
         </div>

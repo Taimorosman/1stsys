@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section, SectionHeader } from "@/components/Section";
 import { Icon, type IconName } from "@/components/Icon";
 import { SampleRequestForm } from "@/components/SampleRequestForm";
+import Link from "next/link";
 
 export default async function ServicesPage() {
   const locale = "en";
@@ -48,8 +49,10 @@ export default async function ServicesPage() {
       <Section size="md">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t.items.map((s, idx) => (
-            <div
+            <Link
               key={s.id}
+              id={s.id}
+              href={`/contact?service=${encodeURIComponent(s.title)}`}
               className="ui-card group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
             >
               {/* Animated Concrete Background Texture - 30% normal / 65% hover */}
@@ -83,7 +86,7 @@ export default async function ServicesPage() {
                   <Icon name={arrow} size={14} />
                 </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </Section>
