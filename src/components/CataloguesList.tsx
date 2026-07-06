@@ -82,7 +82,22 @@ export function CataloguesList({ locale, dict }: Props) {
     }
   };
 
-
+  const renderTitle = (title: string) => {
+    if (title.includes("\n")) {
+      const parts = title.split("\n");
+      return (
+        <span className="flex flex-col items-center">
+          <span>{parts[0]}</span>
+          {parts.slice(1).map((part, index) => (
+            <span key={index} className="font-normal text-[10px] text-[var(--color-fg-subtle)] tracking-widest mt-1 uppercase leading-normal">
+              {part}
+            </span>
+          ))}
+        </span>
+      );
+    }
+    return title;
+  };
 
   const renderDocPreview = (item: CatalogueItem) => {
     const filenameLower = item.filename.toLowerCase();
@@ -357,7 +372,7 @@ export function CataloguesList({ locale, dict }: Props) {
                       <Icon name="FileText" size={28} />
                     </div>
                     <h4 className="text-display text-base font-bold leading-snug text-[var(--color-fg)]">
-                      {label.title}
+                      {renderTitle(label.title)}
                     </h4>
                   </div>
 
@@ -375,7 +390,7 @@ export function CataloguesList({ locale, dict }: Props) {
                       {getCategoryLabel(item.category)}
                     </span>
                     <h4 className="text-display text-sm font-semibold leading-snug text-[var(--color-fg)] line-clamp-1">
-                      {label.title}
+                      {label.title.replace(/\n/g, " ")}
                     </h4>
                     <p className="mt-1.5 text-[11px] leading-relaxed text-[var(--color-fg-muted)] line-clamp-2">
                       {label.subtitle}

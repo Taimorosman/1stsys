@@ -20,11 +20,11 @@ export const cataloguesData: CatalogueItem[] = [
     category: "ccc",
     thumbnail: "/images/catalogues_previews/CCC%20Construction%20Chemicals.png",
     en: {
-      title: "Construction Chemicals",
+      title: "CREATIVE CONCRETE",
       subtitle: "Creative Concrete Concepts main catalog detailing specialized chemistry & solutions.",
     },
     ar: {
-      title: "مواد كيمياء البناء",
+      title: "كريتيف كونكريت",
       subtitle: "الكتالوج الرئيسي لشركة Creative Concrete Concepts يوضح الحلول والمواد الكيميائية المتخصصة.",
     },
   },
@@ -118,11 +118,11 @@ export const cataloguesData: CatalogueItem[] = [
     category: "pavecrete",
     thumbnail: "/images/catalogues_previews/PaveCrete%20700%20Micro%20Expose%20Concrete%2020240329v1s.png",
     en: {
-      title: "700 Micro Exposed",
+      title: "700 Micro Exposed Guide",
       subtitle: "Micro-exposed concrete finish offering fine textures and enhanced slip resistance.",
     },
     ar: {
-      title: "بيف كريت 700 ميكرو إكسبوزد",
+      title: "دليل بيف كريت 700 ميكرو إكسبوزد",
       subtitle: "طبقة تشطيب خرسانية ناعمة بالحصى الصغير الممتاز للحدائق والممرات الفخمة.",
     },
   },
@@ -146,11 +146,11 @@ export const cataloguesData: CatalogueItem[] = [
     category: "topcrete",
     thumbnail: "/images/catalogues_previews/TopCrete%20220.png",
     en: {
-      title: "TopCrete 220 Floor Hardener",
+      title: "TopCrete 220 MICRO TOPPING",
       subtitle: "Non-metallic dry shake floor hardener for heavy industrial and warehouse environments.",
     },
     ar: {
-      title: "مصلب الأرضيات توب كريت 220",
+      title: "توب كريت 220 ميكرو توبينج",
       subtitle: "مصلب أرضيات جاف غير معدني للمستودعات الكبيرة والمنشآت الصناعية عالية التحمل.",
     },
   },
@@ -160,11 +160,11 @@ export const cataloguesData: CatalogueItem[] = [
     category: "topcrete",
     thumbnail: "/images/catalogues_previews/TopCrete%20601%20%202018-01%20SP.png",
     en: {
-      title: "TopCrete 601 Structural Overlay",
+      title: "TopCrete 601 Stampable Overlay",
       subtitle: "Specialized polymer-modified topping for concrete restoration and repair.",
     },
     ar: {
-      title: "توب كريت 601 غطاء هيكلي",
+      title: "توب كريت 601 غطاء مطبوع",
       subtitle: "طبقة تغطية خرسانية معدلة بالبوليمر لترميم الخرسانة التالفة وتجديد مظهرها.",
     },
   },
@@ -202,11 +202,11 @@ export const cataloguesData: CatalogueItem[] = [
     category: "topcrete",
     thumbnail: "/images/catalogues_previews/TopCrete%20720.png",
     en: {
-      title: "TopCrete 720 High Performance Screed",
+      title: "TopCrete 720\nPOLYACRYLATE\nTERRAZZO\nOVERLAY",
       subtitle: "High-strength cementitious floor screed optimized for precision installation.",
     },
     ar: {
-      title: "توب كريت 720 ملاط عالي الأداء",
+      title: "توب كريت 720\nبولياكريليت\nتيرازو\nأوفيرلاي",
       subtitle: "ملاط أرضيات أسمنتي عالي القوة مصمم للتركيبات عالية الدقة في المشاريع الهندسية.",
     },
   },
