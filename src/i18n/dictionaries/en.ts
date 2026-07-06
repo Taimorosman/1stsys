@@ -48,7 +48,7 @@ export const en: Dictionary = {
     },
     intro: {
       eyebrow: "Who we are",
-      title: "Exclusive partner of Creative Concrete Concepts in Saudi Arabia.",
+      title: "Exclusive partner of PROTECTIVE COATINGS Concepts in Saudi Arabia.",
       body: "The First System (TFS) supplies high-performance chemical solutions and engineering services to the construction sector across the Kingdom. Our partnership with CCC and a curated portfolio of global brands means architects, contractors, and operators get a single, dependable source for materials that perform.",
       bullets: [
         "Saudi-built logistics with same-week site delivery",
@@ -115,7 +115,7 @@ export const en: Dictionary = {
     hero: {
       eyebrow: "Established 2015",
       title: "Strategic leadership in decorative and construction chemicals.",
-      body: "For more than a decade we have defined excellence in the construction chemicals sector across the Kingdom. As exclusive agent for Creative Concrete Concepts, we deliver world-class decorative and structural solutions to landmark architectural projects.",
+      body: "For more than a decade we have defined excellence in the construction chemicals sector across the Kingdom. As exclusive agent for PROTECTIVE COATINGS Concepts, we deliver world-class decorative and structural solutions to landmark architectural projects.",
     },
     stats: [
       { value: "11+", unit: "years", label: "Of innovation" },
@@ -128,7 +128,7 @@ export const en: Dictionary = {
       title: "Built on chemistry. Proven on site.",
       paragraphs: [
         "Founded in 2015 in Riyadh, The First System emerged from a simple conviction: the Kingdom's most ambitious builds deserve materials that match their ambition — and a partner that stays on-site until they perform.",
-        "Today we operate across Riyadh, Jeddah, and Dammam, supplying ten engineered systems backed by a global brand portfolio led by Creative Concrete Concepts. Our engineers are present from method statement to final inspection.",
+        "Today we operate across Riyadh, Jeddah, and Dammam, supplying ten engineered systems backed by a global brand portfolio led by PROTECTIVE COATINGS Concepts. Our engineers are present from method statement to final inspection.",
         "Every project we touch is a quiet promise: that what we specify will outlast the building it's installed in.",
       ],
     },
@@ -370,7 +370,7 @@ export const en: Dictionary = {
       {
         id: "ccc",
         name: "CCC",
-        fullName: "Creative Concrete Concepts",
+        fullName: "PROTECTIVE COATINGS Concepts",
         tagline: "Decorative & structural concrete",
         description:
           "Our flagship partnership. CCC delivers premium decorative concrete systems used on landmark Saudi projects.",
@@ -500,7 +500,7 @@ export const en: Dictionary = {
   },
   footer: {
     tagline:
-      "Exclusive agents for Creative Concrete Concepts in Saudi Arabia. Engineering reliability since 2015.",
+      "Exclusive agents for PROTECTIVE COATINGS Concepts in Saudi Arabia. Engineering reliability since 2015.",
     headquarters: {
       title: "Headquarters",
       locations: ["Riyadh HQ – Al-Qairawan", "Jeddah Branch", "Dammam Support"],

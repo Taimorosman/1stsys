@@ -28,7 +28,7 @@ const plexArabic = IBM_Plex_Sans_Arabic({
 
 export const metadata: Metadata = {
   title: "The First System | Decorative & Construction Chemicals",
-  description: "The Kingdom's leading authority in advanced decorative and construction chemicals. Exclusive agent for Creative Concrete Concepts since 2015.",
+  description: "The Kingdom's leading authority in advanced decorative and construction chemicals. Exclusive agent for PROTECTIVE COATINGS Concepts since 2015.",
   icons: {
     icon: [
       { url: "/favicon.ico?v=5", type: "image/x-icon" },
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "The First System | Decorative & Construction Chemicals",
-    description: "The Kingdom's leading authority in advanced decorative and construction chemicals. Exclusive agent for Creative Concrete Concepts since 2015.",
+    description: "The Kingdom's leading authority in advanced decorative and construction chemicals. Exclusive agent for PROTECTIVE COATINGS Concepts since 2015.",
     siteName: "The First System",
     locale: "en_US",
   },

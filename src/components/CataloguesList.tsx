@@ -218,7 +218,7 @@ export function CataloguesList({ locale, dict }: Props) {
             <span className="text-[9px] font-mono text-[var(--color-accent)] uppercase">TECHNICAL DATASHEET (TDS)</span>
             <div className="h-1.5 w-8 bg-[var(--color-fg)]/30 rounded" />
           </div>
-          
+
           <div className="mt-1 space-y-1.5">
             <div className="h-4 w-40 bg-[var(--color-fg)]/10 rounded font-semibold text-[9px] text-[var(--color-fg)] flex items-center px-1">PRODUCT SPECIFICATIONS</div>
             <div className="border border-[var(--color-border)]/50 rounded-lg overflow-hidden bg-[var(--color-bg)]/40 text-[8px] font-mono">
@@ -230,7 +230,7 @@ export function CataloguesList({ locale, dict }: Props) {
               ))}
             </div>
           </div>
-          
+
           <div className="mt-3 flex flex-col gap-1.5">
             <span className="text-[8px] font-bold text-[var(--color-fg)]">APPLICATION PROCEDURE</span>
             <div className="h-1 w-full bg-[var(--color-fg)]/10 rounded" />
@@ -248,7 +248,7 @@ export function CataloguesList({ locale, dict }: Props) {
           <div className="h-2 w-10 bg-[var(--color-accent)] rounded" />
           <span className="text-[9px] font-mono text-[var(--color-accent)] uppercase">PRODUCT BROCHURE</span>
         </div>
-        
+
         <div className="flex flex-col gap-1 mt-1">
           <div className="h-5 w-5/6 bg-[var(--color-fg)] rounded font-semibold text-[10px] flex items-center text-[var(--color-fg)] px-1 uppercase leading-none">{item.filename.split(".")[0]}</div>
           <div className="h-3 w-1/3 bg-[var(--color-fg)]/30 rounded mt-1" />
@@ -293,11 +293,10 @@ export function CataloguesList({ locale, dict }: Props) {
               <button
                 key={cat.value}
                 onClick={() => setSelectedCategory(cat.value)}
-                className={`rounded-full px-5 py-2 text-xs font-semibold tracking-wide transition-all duration-300 border shrink-0 ${
-                  active
+                className={`rounded-full px-5 py-2 text-xs font-semibold tracking-wide transition-all duration-300 border shrink-0 ${active
                     ? "bg-[var(--color-accent)] border-[var(--color-accent)] text-black shadow-lg shadow-[var(--color-accent)]/10"
                     : "bg-[var(--color-surface)] border-[var(--color-border)] text-[var(--color-fg-muted)] hover:border-[var(--color-accent-green)]/60 hover:text-[var(--color-fg)]"
-                }`}
+                  }`}
               >
                 {cat.label}
               </button>
@@ -337,7 +336,7 @@ export function CataloguesList({ locale, dict }: Props) {
           {filteredCatalogues.map((item, idx) => {
             const fileUrl = `/catalogues/${encodeURIComponent(item.filename)}`;
             const label = isAr ? item.ar : item.en;
-            
+
             return (
               <div
                 key={item.filename}
@@ -350,7 +349,7 @@ export function CataloguesList({ locale, dict }: Props) {
                 </div>
 
                 {/* 2. COVER LAYER (Actual PDF Cover Page Image background, fades on hover) */}
-                <div 
+                <div
                   className="catalog-cover-layer absolute inset-0 flex flex-col justify-between p-6 transition-all duration-500 z-10 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none"
                   style={{
                     backgroundImage: `linear-gradient(to bottom, rgba(249, 247, 243, 0.55), rgba(249, 247, 243, 0.85)), url(${item.thumbnail})`,
@@ -378,7 +377,7 @@ export function CataloguesList({ locale, dict }: Props) {
 
                   {/* Footer */}
                   <div className="flex justify-between items-center text-[10px] font-mono text-[var(--color-fg-subtle)] border-t border-[var(--color-border)]/30 pt-3">
-                    <span className="font-semibold text-[9px] uppercase tracking-wider text-[var(--color-accent)]">Creative Concrete</span>
+                    <span className="font-semibold text-[9px] uppercase tracking-wider text-[var(--color-accent)]">PROTECTIVE COATINGS</span>
                     <span className="uppercase text-[var(--color-fg-subtle)] font-medium">PDF DOCUMENT</span>
                   </div>
                 </div>

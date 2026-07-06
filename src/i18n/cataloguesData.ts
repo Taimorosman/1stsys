@@ -20,12 +20,12 @@ export const cataloguesData: CatalogueItem[] = [
     category: "ccc",
     thumbnail: "/images/catalogues_previews/CCC%20Construction%20Chemicals.png",
     en: {
-      title: "CREATIVE CONCRETE",
-      subtitle: "Creative Concrete Concepts main catalog detailing specialized chemistry & solutions.",
+      title: "PROTECTIVE COATINGS",
+      subtitle: "PROTECTIVE COATINGS Concepts main catalog detailing specialized chemistry & solutions.",
     },
     ar: {
-      title: "كريتيف كونكريت",
-      subtitle: "الكتالوج الرئيسي لشركة Creative Concrete Concepts يوضح الحلول والمواد الكيميائية المتخصصة.",
+      title: "الطلاءات الواقية",
+      subtitle: "الكتالوج الرئيسي لشركة PROTECTIVE COATINGS Concepts يوضح الحلول والمواد الكيميائية المتخصصة.",
     },
   },
   {
@@ -34,12 +34,12 @@ export const cataloguesData: CatalogueItem[] = [
     category: "ccc",
     thumbnail: "/images/catalogues_previews/CCC%20Product%20List%202018.png",
     en: {
-      title: "Product List 2018",
-      subtitle: "Comprehensive review of Creative Concrete Concepts product line & system index.",
+      title: "Product List",
+      subtitle: "Comprehensive review of PROTECTIVE COATINGS Concepts product line & system index.",
     },
     ar: {
       title: "قائمة المنتجات 2018",
-      subtitle: "مراجعة شاملة لخط إنتاج Creative Concrete Concepts وفهرس الأنظمة المتوفرة.",
+      subtitle: "مراجعة شاملة لخط إنتاج PROTECTIVE COATINGS Concepts وفهرس الأنظمة المتوفرة.",
     },
   },
   {
@@ -48,7 +48,7 @@ export const cataloguesData: CatalogueItem[] = [
     category: "ccc",
     thumbnail: "/images/catalogues_previews/CCC%20Texturing%20Mats%20Guide%202013.png",
     en: {
-      title: "Texturing Mats Guide",
+      title: "Texturing Mats\nGuide",
       subtitle: "Visual pattern guide for stamped concrete textures, molds, and layouts.",
     },
     ar: {
@@ -76,7 +76,7 @@ export const cataloguesData: CatalogueItem[] = [
     category: "ccc",
     thumbnail: "/images/catalogues_previews/CrystalTop%20Terrazzo%20(S.F)%202018-01.png",
     en: {
-      title: "CrystalTop Terrazzo System",
+      title: "CrystalTop\nEPOXY TERRAZZO",
       subtitle: "Premium polished terrazzo floor systems with marble and glass chips.",
     },
     ar: {
@@ -90,7 +90,7 @@ export const cataloguesData: CatalogueItem[] = [
     category: "pavecrete",
     thumbnail: "/images/catalogues_previews/PaveCrete%20Stamped%20Concrete%20Catalogue.png",
     en: {
-      title: "Stamped Concrete",
+      title: "PaveCrete\nTEXTURED\nCONCRETE",
       subtitle: "Textured, architectural concrete overlays for plazas, driveways, and pathways.",
     },
     ar: {
@@ -104,7 +104,7 @@ export const cataloguesData: CatalogueItem[] = [
     category: "pavecrete",
     thumbnail: "/images/catalogues_previews/PaveCrete%20Exposed%20Aggregate%20Concrete%202022.png",
     en: {
-      title: "Exposed Aggregate",
+      title: "PaveCrete\nEXPOSED\nAGGREGATE\nCONCRETE",
       subtitle: "Exposed aggregate architectural paving systems with durable slip-resistant textures.",
     },
     ar: {
@@ -132,7 +132,7 @@ export const cataloguesData: CatalogueItem[] = [
     category: "pavecrete",
     thumbnail: "/images/catalogues_previews/PaveCrete%20Colored%20Concrete%202012.png",
     en: {
-      title: "Colored Concrete",
+      title: "INNOVATIVE\nDECORATIVE\nCONCRETE\nSOLUTIONS",
       subtitle: "Integrally colored concrete mixtures for uniform and permanent color results.",
     },
     ar: {
@@ -146,7 +146,7 @@ export const cataloguesData: CatalogueItem[] = [
     category: "topcrete",
     thumbnail: "/images/catalogues_previews/TopCrete%20220.png",
     en: {
-      title: "TopCrete 220 MICRO TOPPING",
+      title: "TopCrete 220\nMICRO TOPPING",
       subtitle: "Non-metallic dry shake floor hardener for heavy industrial and warehouse environments.",
     },
     ar: {
@@ -160,7 +160,7 @@ export const cataloguesData: CatalogueItem[] = [
     category: "topcrete",
     thumbnail: "/images/catalogues_previews/TopCrete%20601%20%202018-01%20SP.png",
     en: {
-      title: "TopCrete 601 Stampable Overlay",
+      title: "TopCrete 601\nStampable Overlay",
       subtitle: "Specialized polymer-modified topping for concrete restoration and repair.",
     },
     ar: {
@@ -174,7 +174,7 @@ export const cataloguesData: CatalogueItem[] = [
     category: "topcrete",
     thumbnail: "/images/catalogues_previews/TopCrete%20700%2020240111v1s.png",
     en: {
-      title: "TopCrete 700 Industrial Screed",
+      title: "TopCrete 700\nMICRO EXPOSE",
       subtitle: "Highly wear-resistant floor screed for intense traffic and chemical loading.",
     },
     ar: {
@@ -188,7 +188,7 @@ export const cataloguesData: CatalogueItem[] = [
     category: "topcrete",
     thumbnail: "/images/catalogues_previews/TopCrete%20711%20v202208s.png",
     en: {
-      title: "TopCrete 711 Self-Leveling",
+      title: "TopCrete 711\nCRYSTAL\nTOPPING",
       subtitle: "Self-leveling underlayment for preparing perfectly level substrates before finishes.",
     },
     ar: {
@@ -216,7 +216,7 @@ export const cataloguesData: CatalogueItem[] = [
     category: "specialized",
     thumbnail: "/images/catalogues_previews/ArtCrete%20801%20(1).png",
     en: {
-      title: "ArtCrete 801 Acrylic Sealer",
+      title: "ArtCrete\nRENDER\nSYSTEMS",
       subtitle: "High-gloss acrylic sealer for concrete curing, dustproofing, and surface protection.",
     },
     ar: {
@@ -230,7 +230,7 @@ export const cataloguesData: CatalogueItem[] = [
     category: "specialized",
     thumbnail: "/images/catalogues_previews/InsuCrete%20ST%20Brochure.png",
     en: {
-      title: "InsuCrete ST Insulating Screed",
+      title: "InsuCrete ST\nExterior Insulation & Finish System",
       subtitle: "Lightweight thermal and acoustic insulation screed for roofs and floors.",
     },
     ar: {
@@ -244,7 +244,7 @@ export const cataloguesData: CatalogueItem[] = [
     category: "specialized",
     thumbnail: "/images/catalogues_previews/ChemStain%20Color%20Chart%202011.1.png",
     en: {
-      title: "ChemStain Color Palette",
+      title: "ChemStain\nAcid-Based Chemical Stain",
       subtitle: "Chemical stain color guide for mottled, variegated, and stone-like finishes.",
     },
     ar: {

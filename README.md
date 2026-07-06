@@ -1,6 +1,6 @@
 # The First System — Website
 
-A bilingual (English / Arabic, with full RTL) marketing website for **The First System (TFS)** — exclusive agent for Creative Concrete Concepts in Saudi Arabia. Built with Next.js 16, React 19, TypeScript, and Tailwind CSS v4.
+A bilingual (English / Arabic, with full RTL) marketing website for **The First System (TFS)** — exclusive agent for PROTECTIVE COATINGS Concepts in Saudi Arabia. Built with Next.js 16, React 19, TypeScript, and Tailwind CSS v4.
 
 ## Pages
 
