@@ -21,7 +21,7 @@ export default async function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-32">
         <div className="absolute inset-0 hero-grid-bg pointer-events-none" />
-        <div className="absolute -top-40 end-0 w-[700px] h-[700px] rounded-full bg-[var(--color-accent)]/10 blur-3xl pointer-events-none" />
+        <div className="absolute -top-40 end-0 w-[700px] h-[700px] rounded-full bg-[var(--color-accent-2)]/10 blur-3xl pointer-events-none" />
         <div className="absolute -bottom-32 -start-20 w-[500px] h-[500px] rounded-full bg-[var(--color-accent-2)]/10 blur-3xl pointer-events-none" />
 
         <div className="container-page relative">

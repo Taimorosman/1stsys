@@ -91,7 +91,7 @@ export function InteractiveHero({
       </div>
 
       {/* Dynamic Background Glow - shifts colors and pulses */}
-      <div className="absolute -inset-10 rounded-full bg-gradient-to-tr from-[var(--color-accent)]/15 via-[var(--color-accent-2)]/10 to-[var(--color-accent)]/5 blur-3xl opacity-80 animate-pulse pointer-events-none z-0" />
+      <div className="absolute -inset-10 rounded-full bg-gradient-to-tr from-[var(--color-accent-2)]/15 via-[var(--color-accent-2)]/10 to-[var(--color-accent-2)]/5 blur-3xl opacity-80 animate-pulse pointer-events-none z-0" />
 
       {/* Main Image Container Card */}
       <div 
@@ -99,7 +99,7 @@ export function InteractiveHero({
         style={tiltStyle}
       >
         {/* Outer soft aura glow */}
-        <div className="absolute -inset-2 rounded-[32px] bg-gradient-to-tr from-[var(--color-accent)]/15 to-[var(--color-accent)]/2 blur-xl opacity-75 animate-halo pointer-events-none" />
+        <div className="absolute -inset-2 rounded-[32px] bg-gradient-to-tr from-[var(--color-accent-2)]/15 to-[var(--color-accent-2)]/2 blur-xl opacity-75 animate-halo pointer-events-none" />
 
         {/* Clean, Stunning, Custom Generated Hero Image */}
         <img
@@ -113,7 +113,7 @@ export function InteractiveHero({
           <div 
             className="absolute inset-0 pointer-events-none z-10 transition-opacity duration-300"
             style={{
-              background: `radial-gradient(circle at ${spotlight.x}px ${spotlight.y}px, rgba(255, 255, 255, 0.28) 0%, rgba(0, 189, 58, 0.08) 35%, transparent 65%)`
+              background: `radial-gradient(circle at ${spotlight.x}px ${spotlight.y}px, rgba(255, 255, 255, 0.28) 0%, rgba(142, 154, 168, 0.08) 35%, transparent 65%)`
             }}
           />
         )}
