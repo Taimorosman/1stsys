@@ -13,7 +13,7 @@ export function Logo({
 }) {
   // Since the user requested to replace the previous logo with the new tfs signage PDF logo,
   // we render the newly converted SVG logo.
-  // The logo has an aspect ratio of 3:1 (viewBox 0 0 8503.937 2834.646).
+  // The logo has an aspect ratio of 3:1 (viewBox 1196 400 6114 2038).
   const height = size;
   const width = size * 3;
 
