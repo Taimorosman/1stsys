@@ -55,7 +55,7 @@ export function Header({ locale, dict }: Props) {
     >
       <div className="container-page flex h-16 items-center justify-between gap-6 md:h-20">
         <Link href="/" className="flex items-center group">
-          <Logo variant="full" size={60} locale={locale} />
+          <Logo variant="full" size={76} locale={locale} className="!h-12 md:!h-[72px]" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
