@@ -118,7 +118,7 @@ export const cataloguesData: CatalogueItem[] = [
     category: "pavecrete",
     thumbnail: "/images/catalogues_previews/PaveCrete%20700%20Micro%20Expose%20Concrete%2020240329v1s.png",
     en: {
-      title: "700 Micro Exposed Guide",
+      title: "PaveCrete 700\nMICRO EXPOSE\nCONCRETE",
       subtitle: "Micro-exposed concrete finish offering fine textures and enhanced slip resistance.",
     },
     ar: {
