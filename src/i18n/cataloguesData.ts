@@ -74,7 +74,7 @@ export const cataloguesData: CatalogueItem[] = [
     filename: "CrystalTop Terrazzo (S.F) 2018-01.pdf",
     size: "4.6 MB",
     category: "ccc",
-    thumbnail: "/images/catalogues_previews/CrystalTop%20Terrazzo%20(S.F)%202018-01.png",
+    thumbnail: "/images/catalogues_previews/CrystalTop%20Terrazzo%20(S.F)%202018-01.jpg",
     en: {
       title: "CrystalTop\nEPOXY TERRAZZO",
       subtitle: "Premium polished terrazzo floor systems with marble and glass chips.",
