@@ -352,7 +352,7 @@ export function CataloguesList({ locale, dict }: Props) {
                 <div
                   className="catalog-cover-layer absolute inset-0 flex flex-col justify-between p-6 transition-all duration-500 z-10 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none"
                   style={{
-                    backgroundImage: `linear-gradient(to bottom, rgba(249, 247, 243, 0.55), rgba(249, 247, 243, 0.85)), url(${item.thumbnail})`,
+                    backgroundImage: `linear-gradient(to bottom, rgba(249, 247, 243, 0.55), rgba(249, 247, 243, 0.85)), url("${item.thumbnail}")`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'top center',
                   }}
