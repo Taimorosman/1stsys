@@ -95,13 +95,6 @@ export default async function ProductsPage() {
                     </li>
                   ))}
                 </ul>
-
-                <div className="relative mt-6 inline-flex items-center gap-2 text-sm font-medium text-[var(--color-accent)] opacity-90 z-10">
-                  {dict.common.explore}
-                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                    <Icon name={arrow} size={14} />
-                  </span>
-                </div>
               </div>
             );
           })}
