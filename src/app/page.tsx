@@ -197,7 +197,7 @@ export default async function HomePage() {
               <Link
                 href={`/services#${s.id}`}
                 key={s.id}
-                className="ui-card group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
+                className="ui-card group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl"
               >
                 {/* Dynamic Background Image Texture - Visible by default, scales and clears on hover */}
                 <div 
@@ -248,7 +248,7 @@ export default async function HomePage() {
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-surface-elevated)]/90 via-[var(--color-surface)]/45 to-transparent pointer-events-none z-0" />
-          <div className="absolute -end-32 -top-20 w-[400px] h-[400px] rounded-full bg-[var(--color-accent)]/15 blur-3xl pointer-events-none z-0" />
+          <div className="absolute -end-32 -top-20 w-[400px] h-[400px] rounded-full bg-[var(--color-accent-2)]/15 blur-3xl pointer-events-none z-0" />
           <div className="relative grid gap-6 md:grid-cols-2 md:items-center z-10">
             <div>
               <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
@@ -310,7 +310,7 @@ export default async function HomePage() {
                 return (
                   <div
                     key={b.id}
-                    className="ui-card group relative overflow-hidden flex flex-col items-center justify-center gap-2 border border-[var(--color-border)] bg-[var(--color-surface)] py-12 px-6 w-72 h-52 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
+                    className="ui-card group relative overflow-hidden flex flex-col items-center justify-center gap-2 border border-[var(--color-border)] bg-[var(--color-surface)] py-12 px-6 w-72 h-52 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl"
                     style={{ borderRadius: '0 50% 0 50%' }}
                   >
                     {/* Background texture - visible by default, scales and clears on hover */}
@@ -361,7 +361,7 @@ export default async function HomePage() {
                 return (
                   <div
                     key={`${b.id}-dup`}
-                    className="ui-card group relative overflow-hidden flex flex-col items-center justify-center gap-2 border border-[var(--color-border)] bg-[var(--color-surface)] py-12 px-6 w-72 h-52 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
+                    className="ui-card group relative overflow-hidden flex flex-col items-center justify-center gap-2 border border-[var(--color-border)] bg-[var(--color-surface)] py-12 px-6 w-72 h-52 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl"
                     style={{ borderRadius: '0 50% 0 50%' }}
                   >
                     {/* Background texture - visible by default, scales and clears on hover */}

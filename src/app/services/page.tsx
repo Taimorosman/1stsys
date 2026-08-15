@@ -53,7 +53,7 @@ export default async function ServicesPage() {
               key={s.id}
               id={s.id}
               href={`/contact?service=${encodeURIComponent(s.title)}`}
-              className="ui-card group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
+              className="ui-card group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl"
             >
               {/* Animated Concrete Background Texture - 30% normal / 65% hover */}
               <div 
@@ -112,7 +112,7 @@ export default async function ServicesPage() {
             return (
               <div
                 key={step.step}
-                className="ui-card group/process relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
+                className="ui-card group/process relative overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl"
               >
                 {/* Digital building blueprint background texture */}
                 <div 

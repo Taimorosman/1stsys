@@ -294,7 +294,7 @@ export function CataloguesList({ locale, dict }: Props) {
                 key={cat.value}
                 onClick={() => setSelectedCategory(cat.value)}
                 className={`rounded-full px-5 py-2 text-xs font-semibold tracking-wide transition-all duration-300 border shrink-0 ${active
-                    ? "bg-[var(--color-accent)] border-[var(--color-accent)] text-black shadow-lg shadow-[var(--color-accent)]/10"
+                    ? "bg-[var(--color-accent)] border-[var(--color-accent)] text-black shadow-lg shadow-black/10"
                     : "bg-[var(--color-surface)] border-[var(--color-border)] text-[var(--color-fg-muted)] hover:border-[var(--color-accent-green)]/60 hover:text-[var(--color-fg)]"
                   }`}
               >
@@ -340,7 +340,7 @@ export function CataloguesList({ locale, dict }: Props) {
             return (
               <div
                 key={item.filename}
-                className="ui-card group relative h-[330px] overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] border-s-4 border-s-[var(--color-accent)] transition-all duration-500 hover:border-[var(--color-accent)]/40 hover:shadow-2xl hover:shadow-[var(--color-accent)]/5"
+                className="ui-card group relative h-[330px] overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] border-s-4 border-s-[var(--color-accent)] transition-all duration-500 hover:border-[var(--color-accent)]/40 hover:shadow-2xl hover:shadow-black/5"
                 style={{ animationDelay: `${idx * 40}ms` }}
               >
                 {/* 1. MOCK DOCUMENT BACKGROUND (Scrolls up on hover) */}
@@ -410,7 +410,7 @@ export function CataloguesList({ locale, dict }: Props) {
                     <a
                       href={fileUrl}
                       download={item.filename}
-                      className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl bg-[var(--color-accent)] py-2 text-xs font-semibold text-black transition-all duration-300 shadow-md hover:shadow-lg shadow-[var(--color-accent)]/5 hover:shadow-[var(--color-accent)]/10"
+                      className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-xl bg-[var(--color-accent)] py-2 text-xs font-semibold text-black transition-all duration-300 shadow-md hover:shadow-lg shadow-black/5 hover:shadow-black/10"
                     >
                       <Icon name="Download" size={10} />
                       <span>{t.actions.download}</span>

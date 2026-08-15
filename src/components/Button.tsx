@@ -36,7 +36,7 @@ const sizeClasses: Record<Size, string> = {
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-[#1D1D1D] text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_20px_-8px_rgba(0,189,58,0.3)]",
+    "bg-[#1D1D1D] text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_20px_-8px_rgba(29,29,29,0.35)]",
   secondary:
     "border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg)] hover:bg-[#1D1D1D]/5 hover:border-[#1D1D1D]/30 hover:shadow-sm",
   ghost:

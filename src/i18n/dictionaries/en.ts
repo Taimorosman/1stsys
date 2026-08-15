@@ -500,7 +500,7 @@ export const en: Dictionary = {
   },
   footer: {
     tagline:
-      "Exclusive agents for PROTECTIVE COATINGS Concepts in Saudi Arabia. Engineering reliability since 2015.",
+      "Exclusive agents for Creative concrete Concepts in Saudi Arabia. Engineering reliability since 2015.",
     headquarters: {
       title: "Headquarters",
       locations: ["Riyadh HQ – Al-Qairawan", "Jeddah Branch", "Dammam Support"],

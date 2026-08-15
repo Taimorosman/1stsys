@@ -12,7 +12,7 @@ export function PageHero({ eyebrow, title, body, children, bgImage }: Props) {
   return (
     <section className="relative pt-32 pb-16 md:pt-44 md:pb-28 overflow-hidden">
       <div className="absolute inset-0 hero-grid-bg pointer-events-none" />
-      <div className="absolute -top-32 -end-32 w-[500px] h-[500px] rounded-full bg-[var(--color-accent)]/8 blur-3xl pointer-events-none" />
+      <div className="absolute -top-32 -end-32 w-[500px] h-[500px] rounded-full bg-[var(--color-accent-2)]/8 blur-3xl pointer-events-none" />
 
       <div className="container-page relative">
         {bgImage ? (
@@ -34,7 +34,7 @@ export function PageHero({ eyebrow, title, body, children, bgImage }: Props) {
             </div>
             <div className="lg:col-span-5 relative mt-6 lg:mt-0 animate-fade-in delay-300">
               {/* Outer soft aura glow */}
-              <div className="absolute -inset-2 rounded-[24px] bg-gradient-to-tr from-[var(--color-accent)]/15 to-[var(--color-accent)]/2 blur-xl opacity-75 animate-halo pointer-events-none parallax-glow-1" />
+              <div className="absolute -inset-2 rounded-[24px] bg-gradient-to-tr from-[var(--color-accent-2)]/15 to-[var(--color-accent-2)]/2 blur-xl opacity-75 animate-halo pointer-events-none parallax-glow-1" />
               <div className="ui-card relative rounded-2xl overflow-hidden border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl aspect-[4/3] md:aspect-[16/10] lg:aspect-[4/3] group animate-float-slow parallax-element">
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/60 via-transparent to-transparent z-10 pointer-events-none" />
                 <img

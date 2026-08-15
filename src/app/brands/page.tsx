@@ -62,10 +62,10 @@ export default async function BrandsPage() {
             <Link
               key={b.id}
               href={`/products?category=${getBrandCategory(b.id)}`}
-              className={`ui-card block group relative overflow-hidden rounded-2xl border p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${
+              className={`ui-card block group relative overflow-hidden rounded-2xl border p-7 transition-all duration-300 hover:-translate-y-1 ${
                 b.exclusive
-                  ? "border-[var(--color-accent)]/30 bg-gradient-to-br from-[var(--color-surface)] via-[var(--color-surface)] to-[var(--color-accent-soft)]/20 hover:border-[var(--color-accent)]/60 hover:shadow-[var(--color-accent)]/5"
-                  : "border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-accent-green)]/60 hover:shadow-[var(--color-accent-green)]/5"
+                  ? "border-[var(--color-accent)]/30 bg-gradient-to-br from-[var(--color-surface)] via-[var(--color-surface)] to-[var(--color-accent-soft)]/20 hover:border-[var(--color-accent)]/60"
+                  : "border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-accent-green)]/60"
               }`}
             >
               {/* Dynamic Background Image Texture on Hover */}

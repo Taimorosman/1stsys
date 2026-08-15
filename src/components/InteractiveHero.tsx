@@ -78,7 +78,7 @@ export function InteractiveHero({
         className="absolute inset-[-12%] pointer-events-none opacity-40 z-0 transition-transform"
         style={gridStyle}
       >
-        <svg viewBox="0 0 500 500" fill="none" className="w-full h-full text-[var(--color-accent)]/15">
+        <svg viewBox="0 0 500 500" fill="none" className="w-full h-full text-[var(--color-accent-2)]/15">
           <circle cx="250" cy="250" r="230" stroke="currentColor" strokeWidth="0.8" strokeDasharray="3 6" />
           <circle cx="250" cy="250" r="140" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 4" />
           <line x1="20" y1="250" x2="480" y2="250" stroke="currentColor" strokeWidth="0.5" strokeDasharray="4 4" />

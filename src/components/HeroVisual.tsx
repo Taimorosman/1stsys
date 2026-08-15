@@ -4,7 +4,7 @@ export function HeroVisual() {
   return (
     <div className="relative mx-auto aspect-square w-full max-w-[560px] select-none">
       {/* Soft outer halos (CSS blur, beyond SVG bounds) */}
-      <div className="absolute inset-[12%] rounded-full bg-[var(--color-accent)]/20 blur-[70px] animate-halo" />
+      <div className="absolute inset-[12%] rounded-full bg-[var(--color-accent-2)]/20 blur-[70px] animate-halo" />
       <div className="absolute inset-[30%] rounded-full bg-[var(--color-accent-2)]/15 blur-[50px] animate-halo-delayed" />
 
       <svg
@@ -14,25 +14,25 @@ export function HeroVisual() {
       >
         <defs>
           <radialGradient id="hv-core" cx="38%" cy="32%">
-            <stop offset="0%" stopColor="#e8fded" />
-            <stop offset="35%" stopColor="#9bf2b1" />
-            <stop offset="70%" stopColor="#00bd3a" />
-            <stop offset="100%" stopColor="#043a13" />
+            <stop offset="0%" stopColor="#f3f5f7" />
+            <stop offset="35%" stopColor="#cad2db" />
+            <stop offset="70%" stopColor="#8e9aa8" />
+            <stop offset="100%" stopColor="#31373e" />
           </radialGradient>
           <radialGradient id="hv-halo" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#00bd3a" stopOpacity="0.32" />
-            <stop offset="45%" stopColor="#00bd3a" stopOpacity="0.08" />
-            <stop offset="100%" stopColor="#00bd3a" stopOpacity="0" />
+            <stop offset="0%" stopColor="#8e9aa8" stopOpacity="0.32" />
+            <stop offset="45%" stopColor="#8e9aa8" stopOpacity="0.08" />
+            <stop offset="100%" stopColor="#8e9aa8" stopOpacity="0" />
           </radialGradient>
           <radialGradient id="hv-coreGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#00bd3a" stopOpacity="0.65" />
-            <stop offset="55%" stopColor="#00bd3a" stopOpacity="0.12" />
-            <stop offset="100%" stopColor="#00bd3a" stopOpacity="0" />
+            <stop offset="0%" stopColor="#8e9aa8" stopOpacity="0.65" />
+            <stop offset="55%" stopColor="#8e9aa8" stopOpacity="0.12" />
+            <stop offset="100%" stopColor="#8e9aa8" stopOpacity="0" />
           </radialGradient>
           <radialGradient id="hv-atom" cx="35%" cy="30%">
-            <stop offset="0%" stopColor="#e8fded" />
-            <stop offset="55%" stopColor="#00bd3a" />
-            <stop offset="100%" stopColor="#004d16" />
+            <stop offset="0%" stopColor="#f3f5f7" />
+            <stop offset="55%" stopColor="#8e9aa8" />
+            <stop offset="100%" stopColor="#222830" />
           </radialGradient>
 
           <pattern
@@ -45,7 +45,7 @@ export function HeroVisual() {
           >
             <path
               d="M23 0 L46 13 L46 27 L23 40 L0 27 L0 13 Z"
-              stroke="rgba(0,189,58,0.16)"
+              stroke="rgba(142,154,168,0.2)"
               strokeWidth="0.6"
               fill="none"
             />
@@ -113,7 +113,7 @@ export function HeroVisual() {
             fill="none"
           />
           <g>
-            <circle cx="560" cy="300" r="24" fill="#00bd3a" opacity="0.14" />
+            <circle cx="560" cy="300" r="24" fill="#8e9aa8" opacity="0.14" />
             <circle cx="560" cy="300" r="11" fill="url(#hv-atom)" />
             <circle
               cx="556.5"
@@ -146,7 +146,7 @@ export function HeroVisual() {
             fill="none"
           />
           <g>
-            <circle cx="540" cy="300" r="22" fill="#00bd3a" opacity="0.16" />
+            <circle cx="540" cy="300" r="22" fill="#8e9aa8" opacity="0.16" />
             <circle cx="540" cy="300" r="10" fill="url(#hv-atom)" />
             <circle
               cx="537"
@@ -211,7 +211,7 @@ export function HeroVisual() {
             { cx: 250, delay: 7.1, dur: 11.5, r: 1.1 },
             { cx: 340, delay: 2.7, dur: 10.5, r: 1.4 },
           ].map((p, i) => (
-            <circle key={i} cx={p.cx} cy="540" r={p.r} fill="#00bd3a">
+            <circle key={i} cx={p.cx} cy="540" r={p.r} fill="#8e9aa8">
               <animate
                 attributeName="cy"
                 from="560"
