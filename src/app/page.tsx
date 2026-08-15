@@ -195,7 +195,7 @@ export default async function HomePage() {
 
             return (
               <Link
-                href={`/services#${s.id}`}
+                href="/about"
                 key={s.id}
                 className="ui-card group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl"
               >
