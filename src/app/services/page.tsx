@@ -5,14 +5,12 @@ import { PageHero } from "@/components/PageHero";
 import { Section, SectionHeader } from "@/components/Section";
 import { Icon, type IconName } from "@/components/Icon";
 import { SampleRequestForm } from "@/components/SampleRequestForm";
-import Link from "next/link";
 
 export default async function ServicesPage() {
   const locale = "en";
   const dict = getDictionary(locale);
   const t = dict.services;
   const isAr = false;
-  const arrow = "ArrowRight";
 
   const getServiceBgImage = (id: string) => {
     switch (id) {
@@ -49,10 +47,9 @@ export default async function ServicesPage() {
       <Section size="md">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t.items.map((s, idx) => (
-            <Link
+            <div
               key={s.id}
               id={s.id}
-              href={`/contact?service=${encodeURIComponent(s.title)}`}
               className="ui-card group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 transition-all duration-300 hover:border-[var(--color-accent)]/45 hover:-translate-y-1 hover:shadow-2xl"
             >
               {/* Animated Concrete Background Texture - 30% normal / 65% hover */}
@@ -80,13 +77,7 @@ export default async function ServicesPage() {
               <p className="relative mt-2 text-sm leading-relaxed text-[var(--color-fg-muted)] z-10">
                 {s.description}
               </p>
-              <div className="relative mt-6 inline-flex items-center gap-2 text-sm font-medium text-[var(--color-accent)] z-10">
-                {dict.common.learnMore}
-                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                  <Icon name={arrow} size={14} />
-                </span>
-              </div>
-            </Link>
+            </div>
           ))}
         </div>
       </Section>
