@@ -1,16 +1,24 @@
+"use client";
+
 import * as React from "react";
 import Link from "next/link";
 import type { Dict } from "@/i18n/getDictionary";
 import type { Locale } from "@/i18n/config";
+import { useLanguage } from "@/context/LanguageContext";
 import { Icon } from "./Icon";
 import { Logo } from "./Logo";
 
 interface Props {
-  locale: Locale;
-  dict: Dict;
+  locale?: Locale;
+  dict?: Dict;
 }
 
-export function Footer({ locale, dict }: Props) {
+export function Footer({ locale: propLocale, dict: propDict }: Props) {
+  const langContext = useLanguage();
+  const locale = langContext?.locale || propLocale || "en";
+  const dict = langContext?.dict || propDict;
+
+  if (!dict) return null;
   const f = dict.footer;
   const localePath = (href: string) => href;
 

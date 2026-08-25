@@ -1,15 +1,22 @@
+"use client";
+
 import * as React from "react";
 import type { Locale } from "@/i18n/config";
+import { useLanguage } from "@/context/LanguageContext";
 
-export function WhatsAppFab({ locale }: { locale: Locale }) {
-  const label = locale === "ar" ? "تواصل عبر واتساب" : "Chat on WhatsApp";
+export function WhatsAppFab({ locale: propLocale }: { locale?: Locale }) {
+  const langContext = useLanguage();
+  const locale = langContext?.locale || propLocale || "en";
+  const label = locale === "ur" ? "واٹس ایپ پر رابطہ کریں" : locale === "ar" ? "تواصل عبر واتساب" : "Chat on WhatsApp";
+  
   return (
     <a
       href="https://wa.me/966569444664"
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="fixed bottom-6 end-6 z-40 grid h-13 w-13 place-items-center rounded-full bg-[#25d366] text-white shadow-[0_10px_30px_-5px_rgba(37,211,102,0.5)] hover:scale-105 active:scale-95 transition"
+      title={label}
+      className="fixed bottom-6 end-6 z-40 grid h-14 w-14 place-items-center rounded-full bg-[#25d366] text-white shadow-[0_10px_30px_-5px_rgba(37,211,102,0.5)] hover:scale-105 active:scale-95 transition"
       style={{ height: 56, width: 56 }}
     >
       <svg width={26} height={26} viewBox="0 0 32 32" fill="currentColor" aria-hidden>

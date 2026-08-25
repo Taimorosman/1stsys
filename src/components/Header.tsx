@@ -5,16 +5,25 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { Dict } from "@/i18n/getDictionary";
 import type { Locale } from "@/i18n/config";
+import { useLanguage } from "@/context/LanguageContext";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Icon } from "./Icon";
 import { Logo } from "./Logo";
 
 interface Props {
-  locale: Locale;
-  dict: Dict;
+  locale?: Locale;
+  dict?: Dict;
 }
 
-export function Header({ locale, dict }: Props) {
+export function Header({ locale: propLocale, dict: propDict }: Props) {
   const pathname = usePathname();
+  const langContext = useLanguage();
+  
+  const locale = langContext?.locale || propLocale || "en";
+  const dict = langContext?.dict || propDict;
+  const dir = langContext?.dir || (locale === "ur" || locale === "ar" ? "rtl" : "ltr");
+  const isRtl = dir === "rtl";
+
   const [scrolled, setScrolled] = React.useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -28,6 +37,8 @@ export function Header({ locale, dict }: Props) {
   React.useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
+
+  if (!dict) return null;
 
   const links = [
     { href: "/", label: dict.nav.home, exact: true },
@@ -43,8 +54,6 @@ export function Header({ locale, dict }: Props) {
     return pathname === href || pathname.startsWith(href + "/");
   };
 
-
-
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
@@ -53,8 +62,8 @@ export function Header({ locale, dict }: Props) {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="container-page flex h-16 items-center justify-between gap-6 md:h-20">
-        <Link href="/" className="flex items-center group">
+      <div className="container-page flex h-16 items-center justify-between gap-4 md:gap-6 md:h-20">
+        <Link href="/" className="flex items-center group shrink-0">
           <Logo variant="full" size={76} locale={locale} className="!h-12 md:!h-[72px]" />
         </Link>
 
@@ -67,7 +76,7 @@ export function Header({ locale, dict }: Props) {
                 href={l.href}
                 className={`relative rounded-full px-4 py-2 text-sm transition-colors ${
                   active
-                    ? "text-[var(--color-fg)]"
+                    ? "text-[var(--color-fg)] font-semibold"
                     : "text-[var(--color-fg-muted)] hover:text-[var(--color-fg)]"
                 }`}
               >
@@ -80,17 +89,20 @@ export function Header({ locale, dict }: Props) {
           })}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 md:gap-3">
+          {/* Language Switcher */}
+          <LanguageSwitcher variant="header" />
 
-
+          {/* Request Sample CTA */}
           <Link
             href="/contact"
             className="hidden md:inline-flex items-center gap-2 rounded-full bg-[#1D1D1D] px-4 py-2 text-sm font-semibold text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white transition shadow-sm"
           >
             {dict.nav.cta}
-            <Icon name={locale === "ar" ? "ArrowLeft" : "ArrowRight"} size={14} />
+            <Icon name={isRtl ? "ArrowLeft" : "ArrowRight"} size={14} />
           </Link>
 
+          {/* Mobile Menu Button */}
           <button
             className="lg:hidden grid h-10 w-10 place-items-center rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-fg)]"
             onClick={() => setMobileOpen((v) => !v)}
@@ -103,7 +115,7 @@ export function Header({ locale, dict }: Props) {
 
       {mobileOpen && (
         <div className="lg:hidden border-t border-[var(--color-border)] bg-[var(--color-bg)]/95 backdrop-blur">
-          <nav className="container-page flex flex-col py-4">
+          <nav className="container-page flex flex-col py-4 gap-1">
             {links.map((l) => {
               const active = isActive(l.href, l.exact);
               return (
@@ -112,21 +124,24 @@ export function Header({ locale, dict }: Props) {
                   href={l.href}
                   className={`flex items-center justify-between rounded-xl px-3 py-3 text-base ${
                     active
-                      ? "text-[var(--color-fg)] bg-[var(--color-surface)]"
+                      ? "text-[var(--color-fg)] bg-[var(--color-surface)] font-semibold"
                       : "text-[var(--color-fg-muted)] hover:text-[var(--color-fg)]"
                   }`}
                 >
                   <span>{l.label}</span>
-                  <Icon name={locale === "ar" ? "ArrowLeft" : "ArrowRight"} size={16} />
+                  <Icon name={isRtl ? "ArrowLeft" : "ArrowRight"} size={16} />
                 </Link>
               );
             })}
-            <div className="mt-3">
+
+            <div className="mt-3 flex flex-col gap-2">
+              <LanguageSwitcher variant="mobile" />
               <Link
                 href="/contact"
                 className="flex items-center justify-center gap-2 rounded-xl bg-[#1D1D1D] px-3 py-3 text-sm font-semibold text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white transition shadow-sm w-full"
               >
                 {dict.nav.cta}
+                <Icon name={isRtl ? "ArrowLeft" : "ArrowRight"} size={14} />
               </Link>
             </div>
           </nav>

@@ -41,19 +41,19 @@ export const en: Dictionary = {
       ctaSecondary: "Technical Catalog",
       stats: [
         { value: "11+", label: "Years of innovation" },
-        { value: "10", label: "Specialized systems" },
+        { value: "Complete", label: "Specialized systems" },
         { value: "500+", label: "Projects delivered" },
         { value: "3", label: "Regional offices" },
       ],
     },
     intro: {
       eyebrow: "Who we are",
-      title: "Exclusive partner of PROTECTIVE COATINGS Concepts in Saudi Arabia.",
+      title: "Exclusive partner of Creative Concrete Concepts in Saudi Arabia.",
       body: "The First System (TFS) supplies high-performance chemical solutions and engineering services to the construction sector across the Kingdom. Our partnership with CCC and a curated portfolio of global brands means architects, contractors, and operators get a single, dependable source for materials that perform.",
       bullets: [
         "Saudi-built logistics with same-week site delivery",
         "Certified technicians for on-site application support",
-        "Ten engineered systems under one technical roof",
+        "Engineered systems under one technical roof",
       ],
     },
     values: {
@@ -89,7 +89,7 @@ export const en: Dictionary = {
     },
     services: {
       eyebrow: "Our core systems",
-      title: "Ten engineered systems for any structural challenge.",
+      title: "Engineered systems for any structural challenge.",
       subtitle:
         "From admixtures to architectural finishes, every system is specified, sourced, and supported by our technical team.",
     },
@@ -115,11 +115,11 @@ export const en: Dictionary = {
     hero: {
       eyebrow: "Established 2015",
       title: "Strategic leadership in decorative and construction chemicals.",
-      body: "For more than a decade we have defined excellence in the construction chemicals sector across the Kingdom. As exclusive agent for PROTECTIVE COATINGS Concepts, we deliver world-class decorative and structural solutions to landmark architectural projects.",
+      body: "For more than a decade we have defined excellence in the construction chemicals sector across the Kingdom. As exclusive agent for Creative Concrete Concepts, we deliver world-class decorative and structural solutions to landmark architectural projects.",
     },
     stats: [
       { value: "11+", unit: "years", label: "Of innovation" },
-      { value: "10", unit: "systems", label: "Specialized verticals" },
+      { value: "Full", unit: "coverage", label: "Specialized verticals" },
       { value: "500+", unit: "projects", label: "Delivered across KSA" },
       { value: "1", unit: "exclusive", label: "CCC agent in Saudi Arabia" },
     ],
@@ -128,7 +128,7 @@ export const en: Dictionary = {
       title: "Built on chemistry. Proven on site.",
       paragraphs: [
         "Founded in 2015 in Riyadh, The First System emerged from a simple conviction: the Kingdom's most ambitious builds deserve materials that match their ambition — and a partner that stays on-site until they perform.",
-        "Today we operate across Riyadh, Jeddah, and Dammam, supplying ten engineered systems backed by a global brand portfolio led by PROTECTIVE COATINGS Concepts. Our engineers are present from method statement to final inspection.",
+        "Today we operate across Riyadh, Jeddah, and Dammam, supplying engineered systems backed by a global brand portfolio led by Creative Concrete Concepts. Our engineers are present from method statement to final inspection.",
         "Every project we touch is a quiet promise: that what we specify will outlast the building it's installed in.",
       ],
     },
@@ -174,7 +174,7 @@ export const en: Dictionary = {
     hero: {
       eyebrow: "Our expertise",
       title: "Comprehensive decorative and construction chemicals — engineered for performance.",
-      body: "Ten specialized systems covering every layer of the modern build, from foundation to finish. Each system is supplied, specified, and supported by our in-house technical team.",
+      body: "Specialized systems covering every layer of the modern build, from foundation to finish. Each system is supplied, specified, and supported by our in-house technical team.",
     },
     items: [
       {
@@ -307,7 +307,7 @@ export const en: Dictionary = {
       body: "High-performance construction chemicals engineered for structural stability across our specialized systems — built for the Kingdom's extreme environments.",
     },
     categoriesSection: {
-      eyebrow: "10 KEY SYSTEMS",
+      eyebrow: "KEY SYSTEMS",
       title: "Product Categories",
       subtitle: "Five flagship verticals, each with multiple engineered system families.",
     },
@@ -370,7 +370,7 @@ export const en: Dictionary = {
       {
         id: "ccc",
         name: "CCC",
-        fullName: "PROTECTIVE COATINGS Concepts",
+        fullName: "Creative Concrete Concepts",
         tagline: "Decorative & structural concrete",
         description:
           "Our flagship partnership. CCC delivers premium decorative concrete systems used on landmark Saudi projects.",
@@ -500,10 +500,10 @@ export const en: Dictionary = {
   },
   footer: {
     tagline:
-      "Exclusive agents for Creative concrete Concepts in Saudi Arabia. Engineering reliability since 2015.",
+      "Exclusive agents for Creative Concrete Concepts in Saudi Arabia. Engineering reliability since 2015.",
     headquarters: {
       title: "Headquarters",
-      locations: ["Riyadh HQ – Al-Qairawan", "Jeddah Branch", "Dammam Support"],
+      locations: ["Riyadh", "Jeddah", "Dammam"],
     },
     quickLinks: {
       title: "Quick Links",

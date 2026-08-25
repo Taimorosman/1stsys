@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Syne, IBM_Plex_Sans_Arabic } from "next/font/google";
-import { getDictionary } from "@/i18n/getDictionary";
+import { LanguageProvider } from "@/context/LanguageContext";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
@@ -28,7 +28,7 @@ const plexArabic = IBM_Plex_Sans_Arabic({
 
 export const metadata: Metadata = {
   title: "The First System | Decorative & Construction Chemicals",
-  description: "The Kingdom's leading authority in advanced decorative and construction chemicals. Exclusive agent for PROTECTIVE COATINGS Concepts since 2015.",
+  description: "The Kingdom's leading authority in advanced decorative and construction chemicals. Exclusive agent for Creative Concrete Concepts since 2015.",
   icons: {
     icon: [
       { url: "/favicon.ico?v=5", type: "image/x-icon" },
@@ -41,24 +41,22 @@ export const metadata: Metadata = {
   alternates: {
     languages: {
       en: "/",
+      ur: "/",
     },
   },
   openGraph: {
     title: "The First System | Decorative & Construction Chemicals",
-    description: "The Kingdom's leading authority in advanced decorative and construction chemicals. Exclusive agent for PROTECTIVE COATINGS Concepts since 2015.",
+    description: "The Kingdom's leading authority in advanced decorative and construction chemicals. Exclusive agent for Creative Concrete Concepts since 2015.",
     siteName: "The First System",
     locale: "en_US",
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const locale = "en";
-  const dict = getDictionary(locale);
-
   return (
     <html
       lang="en"
@@ -67,11 +65,13 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body suppressHydrationWarning>
-        <MouseParallax />
-        <Header locale={locale} dict={dict} />
-        <main>{children}</main>
-        <Footer locale={locale} dict={dict} />
-        <WhatsAppFab locale={locale} />
+        <LanguageProvider>
+          <MouseParallax />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <WhatsAppFab />
+        </LanguageProvider>
       </body>
     </html>
   );

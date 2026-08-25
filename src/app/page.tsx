@@ -1,6 +1,6 @@
-import { notFound } from "next/navigation";
-import { isLocale } from "@/i18n/config";
-import { getDictionary } from "@/i18n/getDictionary";
+﻿"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
 import { Section, SectionHeader } from "@/components/Section";
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
@@ -9,12 +9,12 @@ import { NewsletterForm } from "@/components/NewsletterForm";
 import { InteractiveHero } from "@/components/InteractiveHero";
 import Link from "next/link";
 
-export default async function HomePage() {
-  const locale = "en";
-  const dict = getDictionary(locale);
+export default function HomePage() {
+  const { locale, dict, dir } = useLanguage();
   const t = dict.home;
-  const isAr = false;
-  const arrowIcon = "ArrowRight";
+  const isAr = locale === "ar";
+  const isRtl = dir === "rtl";
+  const arrowIcon = isRtl ? "ArrowLeft" : "ArrowRight";
 
   return (
     <>
@@ -425,3 +425,4 @@ export default async function HomePage() {
     </>
   );
 }
+

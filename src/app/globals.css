@@ -55,7 +55,8 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-html[lang="ar"] {
+html[lang="ar"],
+html[lang="ur"] {
   font-family: var(--font-arabic);
 }
 

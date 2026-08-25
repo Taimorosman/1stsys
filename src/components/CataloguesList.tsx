@@ -377,7 +377,7 @@ export function CataloguesList({ locale, dict }: Props) {
 
                   {/* Footer */}
                   <div className="flex justify-between items-center text-[10px] font-mono text-[var(--color-fg-subtle)] border-t border-[var(--color-border)]/30 pt-3">
-                    <span className="font-semibold text-[9px] uppercase tracking-wider text-[var(--color-accent)]">PROTECTIVE COATINGS</span>
+                    <span className="font-semibold text-[9px] uppercase tracking-wider text-[var(--color-accent)]">CREATIVE CONCRETE CONCEPTS</span>
                     <span className="uppercase text-[var(--color-fg-subtle)] font-medium">PDF DOCUMENT</span>
                   </div>
                 </div>

@@ -20,12 +20,12 @@ export const cataloguesData: CatalogueItem[] = [
     category: "ccc",
     thumbnail: "/images/catalogues_previews/CCC%20Construction%20Chemicals.png",
     en: {
-      title: "PROTECTIVE COATINGS",
-      subtitle: "PROTECTIVE COATINGS Concepts main catalog detailing specialized chemistry & solutions.",
+      title: "CCC Construction Chemicals",
+      subtitle: "Creative Concrete Concepts main catalog detailing specialized chemistry & solutions.",
     },
     ar: {
-      title: "الطلاءات الواقية",
-      subtitle: "الكتالوج الرئيسي لشركة PROTECTIVE COATINGS Concepts يوضح الحلول والمواد الكيميائية المتخصصة.",
+      title: "كيماويات البناء CCC",
+      subtitle: "الكتالوج الرئيسي لشركة Creative Concrete Concepts يوضح الحلول والمواد الكيميائية المتخصصة.",
     },
   },
   {
@@ -35,11 +35,11 @@ export const cataloguesData: CatalogueItem[] = [
     thumbnail: "/images/catalogues_previews/CCC%20Product%20List%202018.png",
     en: {
       title: "Product List",
-      subtitle: "Comprehensive review of PROTECTIVE COATINGS Concepts product line & system index.",
+      subtitle: "Comprehensive review of Creative Concrete Concepts product line & system index.",
     },
     ar: {
       title: "قائمة المنتجات 2018",
-      subtitle: "مراجعة شاملة لخط إنتاج PROTECTIVE COATINGS Concepts وفهرس الأنظمة المتوفرة.",
+      subtitle: "مراجعة شاملة لخط إنتاج Creative Concrete Concepts وفهرس الأنظمة المتوفرة.",
     },
   },
   {

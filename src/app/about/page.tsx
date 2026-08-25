@@ -1,18 +1,18 @@
-import { notFound } from "next/navigation";
-import { isLocale } from "@/i18n/config";
-import { getDictionary } from "@/i18n/getDictionary";
+﻿"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
 import { PageHero } from "@/components/PageHero";
 import { Section, SectionHeader } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { Button } from "@/components/Button";
 import { Icon, type IconName } from "@/components/Icon";
 
-export default async function AboutPage() {
-  const locale = "en";
-  const dict = getDictionary(locale);
+export default function AboutPage() {
+  const { locale, dict, dir } = useLanguage();
   const t = dict.about;
-  const isAr = false;
-  const arrow = "ArrowRight";
+  const isAr = locale === "ar";
+  const isRtl = dir === "rtl";
+  const arrow = isRtl ? "ArrowLeft" : "ArrowRight";
 
   return (
     <>
@@ -172,3 +172,4 @@ export default async function AboutPage() {
     </>
   );
 }
+
