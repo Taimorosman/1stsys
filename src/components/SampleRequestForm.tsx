@@ -24,22 +24,18 @@ interface FormState {
 export function SampleRequestForm({ dict, variant = "contact" }: Props) {
   const config = variant === "contact" ? dict.contact.form : dict.services.sampleForm;
   const isContact = variant === "contact";
-  const locale = dict.nav.switchTo === "العربية" ? "en" : "ar";
 
   const getPlaceholder = (fieldKey: string) => {
-    const placeholders: Record<string, { en: string; ar: string }> = {
-      projectName: { en: "e.g., Al Faisaliyah Tower", ar: "مثال: برج الفيصلية" },
-      contactPerson: { en: "e.g., John Doe", ar: "مثال: محمد أحمد" },
-      email: { en: "e.g., name@company.com", ar: "مثال: name@company.com" },
-      ccEmails: { en: "e.g., colleague@company.com, boss@company.com", ar: "مثال: colleague@company.com, manager@company.com" },
-      phone: { en: "e.g., +966 50 000 0000", ar: "مثال: +966 50 000 0000" },
-      materialsSystem: {
-        en: "Specify the concrete/chemical systems or solutions you need (e.g. specialized epoxy flooring, high-strength mortar)...",
-        ar: "حدد أنظمة الخرسانة/الكيماويات أو الحلول التي تحتاجها (مثال: أرضيات الإيبوكسي المتخصصة، ملاط عالي القوة)..."
-      },
-      message: { en: "Describe your project requirements or specific details...", ar: "صف متطلبات مشروعك أو أي تفاصيل محددة..." },
+    const placeholders: Record<string, string> = {
+      projectName: "e.g., Al Faisaliyah Tower",
+      contactPerson: "e.g., John Doe",
+      email: "e.g., name@company.com",
+      ccEmails: "e.g., colleague@company.com, boss@company.com",
+      phone: "e.g., +966 50 000 0000",
+      materialsSystem: "Specify the concrete/chemical systems or solutions you need (e.g. specialized epoxy flooring, high-strength mortar)...",
+      message: "Describe your project requirements or specific details...",
     };
-    return placeholders[fieldKey]?.[locale] || "";
+    return placeholders[fieldKey] || "";
   };
 
   const [state, setState] = React.useState<FormState>({
@@ -78,7 +74,7 @@ export function SampleRequestForm({ dict, variant = "contact" }: Props) {
     const file = e.target.files?.[0] || null;
     if (file) {
       if (!file.type.startsWith("image/")) {
-        alert(locale === "ar" ? "يرجى اختيار ملف صورة." : "Please select an image file.");
+        alert("Please select an image file.");
         return;
       }
       setState((s) => ({ ...s, imageFile: file }));
@@ -101,37 +97,56 @@ export function SampleRequestForm({ dict, variant = "contact" }: Props) {
       setStatus("error");
       return;
     }
+
     setStatus("sending");
+
+    // Compose professional email body
+    const emailSubject = encodeURIComponent(
+      `Sample Request: ${state.projectName} - ${state.materialsSystem}`
+    );
+    const emailBody = encodeURIComponent(
+      `Hello The First System Team,
+
+Please find the details for our sample/technical inquiry below:
+
+- Project Name: ${state.projectName}
+- Required Date: ${state.date || "As soon as possible"}
+- Material/System: ${state.materialsSystem}
+- Contact Person: ${state.contactPerson || "N/A"}
+- Email: ${state.email}
+- CC: ${state.ccEmails || "None"}
+- Phone: ${state.phone || "N/A"}
+
+Project Notes / Requirements:
+${state.message || "N/A"}
+
+Attached/Uploaded Image Reference: ${state.imageFile ? state.imageFile.name : "None"}
+
+Sent via TFS Portal`
+    );
+
+    const ccParam = state.ccEmails ? `&cc=${encodeURIComponent(state.ccEmails)}` : "";
+    const mailtoUrl = `mailto:info@firstsystem.sa?subject=${emailSubject}&body=${emailBody}${ccParam}`;
+
+    // Trigger user's email client
+    window.location.href = mailtoUrl;
+
     setTimeout(() => {
       setStatus("sent");
-      setState({
-        projectName: "",
-        date: "",
-        materialsSystem: "",
-        contactPerson: "",
-        email: "",
-        ccEmails: "",
-        phone: "",
-        message: "",
-        imageFile: null,
-      });
-      setImagePreviewUrl(null);
-    }, 800);
+    }, 600);
   };
 
   return (
     <form
       onSubmit={onSubmit}
-      className="ui-card rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 md:p-8"
+      className="ui-card rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 md:p-8 shadow-xl"
     >
-      <div className="mb-6">
+      <div>
         <h3 className="text-display text-2xl font-medium md:text-3xl">{config.title}</h3>
-        {"subtitle" in config && config.subtitle && (
-          <p className="mt-2 text-sm text-[var(--color-fg-muted)]">{config.subtitle}</p>
-        )}
+        <p className="mt-2 text-sm text-[var(--color-fg-muted)]">{config.subtitle}</p>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="mt-8 grid gap-5 md:grid-cols-2">
         <Field label={config.fields.projectName} required>
           <input
             type="text"
@@ -143,10 +158,9 @@ export function SampleRequestForm({ dict, variant = "contact" }: Props) {
           />
         </Field>
 
-        <Field label={isContact ? dict.contact.form.fields.date : dict.services.sampleForm.fields.deliveryDate} required>
+        <Field label={isContact ? dict.contact.form.fields.date : dict.services.sampleForm.fields.deliveryDate}>
           <input
             type="date"
-            required
             value={state.date}
             onChange={update("date")}
             className={inputClass}
@@ -154,28 +168,25 @@ export function SampleRequestForm({ dict, variant = "contact" }: Props) {
         </Field>
 
         <Field label={config.fields.materialsSystem} required className="md:col-span-2">
-          <textarea
+          <input
+            type="text"
             required
-            rows={3}
             value={state.materialsSystem}
             onChange={update("materialsSystem")}
             placeholder={getPlaceholder("materialsSystem")}
-            className={`${inputClass} resize-none py-3 h-auto`}
+            className={inputClass}
           />
         </Field>
 
-        {isContact && (
-          <Field label={dict.contact.form.fields.contactPerson} required>
-            <input
-              type="text"
-              required
-              value={state.contactPerson}
-              onChange={update("contactPerson")}
-              placeholder={getPlaceholder("contactPerson")}
-              className={inputClass}
-            />
-          </Field>
-        )}
+        <Field label={config.fields.contactPerson}>
+          <input
+            type="text"
+            value={state.contactPerson}
+            onChange={update("contactPerson")}
+            placeholder={getPlaceholder("contactPerson")}
+            className={inputClass}
+          />
+        </Field>
 
         <Field label={isContact ? dict.contact.form.fields.email : dict.services.sampleForm.fields.email} required>
           <input
@@ -189,7 +200,7 @@ export function SampleRequestForm({ dict, variant = "contact" }: Props) {
           />
         </Field>
 
-        <Field label={locale === "ar" ? "نسخة كربونية للبريد الإلكتروني (اختياري)" : "CC Email(s) (optional)"} className="md:col-span-2">
+        <Field label="CC Email(s) (optional)" className="md:col-span-2">
           <input
             type="text"
             value={state.ccEmails}
@@ -216,7 +227,7 @@ export function SampleRequestForm({ dict, variant = "contact" }: Props) {
         {/* Image/File Upload zone */}
         <div className="md:col-span-2">
           <span className="text-xs font-medium text-[var(--color-fg-muted)] block mb-2">
-            {locale === "ar" ? "صورة العينة المطلوبة (اختياري)" : "Reference Image / Spec Sample (optional)"}
+            Reference Image / Spec Sample (optional)
           </span>
           
           {imagePreviewUrl ? (
@@ -257,10 +268,10 @@ export function SampleRequestForm({ dict, variant = "contact" }: Props) {
                 <Icon name="Upload" size={20} />
               </div>
               <p className="text-xs font-semibold text-[var(--color-fg)]">
-                {locale === "ar" ? "اضغط لرفع صورة أو اسحبها هنا" : "Click to upload an image or drag & drop"}
+                Click to upload an image or drag & drop
               </p>
               <p className="text-[10px] text-[var(--color-fg-subtle)] mt-1">
-                {locale === "ar" ? "يدعم صيغ PNG, JPG, WEBP (بحد أقصى 5 ميجابايت)" : "Supports PNG, JPG, WEBP (max 5MB)"}
+                Supports PNG, JPG, WEBP (max 5MB)
               </p>
             </label>
           )}

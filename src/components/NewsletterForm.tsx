@@ -5,13 +5,13 @@ import type { Locale } from "@/i18n/config";
 import { Icon } from "./Icon";
 
 interface Props {
-  locale: Locale;
+  locale?: Locale;
   placeholder: string;
   cta: string;
   successText: string;
 }
 
-export function NewsletterForm({ locale: _locale, placeholder, cta, successText }: Props) {
+export function NewsletterForm({ placeholder, cta, successText }: Props) {
   const [value, setValue] = React.useState("");
   const [submitted, setSubmitted] = React.useState(false);
 

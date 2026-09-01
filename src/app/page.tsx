@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useLanguage } from "@/context/LanguageContext";
 import { Section, SectionHeader } from "@/components/Section";
@@ -10,11 +10,9 @@ import { InteractiveHero } from "@/components/InteractiveHero";
 import Link from "next/link";
 
 export default function HomePage() {
-  const { locale, dict, dir } = useLanguage();
+  const { dict } = useLanguage();
   const t = dict.home;
-  const isAr = locale === "ar";
-  const isRtl = dir === "rtl";
-  const arrowIcon = isRtl ? "ArrowLeft" : "ArrowRight";
+  const arrowIcon = "ArrowRight";
 
   return (
     <>
@@ -59,8 +57,7 @@ export default function HomePage() {
             <div className="lg:col-span-6">
               <div className="animate-fade-in delay-300">
                 <InteractiveHero
-                  isAr={isAr}
-                  altText={isAr ? "النظام الأول - حلول البناء المبتكرة" : "The First System - Innovative Construction Solutions"}
+                  altText="The First System - Innovative Construction Solutions"
                 />
               </div>
             </div>
@@ -413,7 +410,6 @@ export default function HomePage() {
             </div>
             <div className="md:justify-self-end w-full md:max-w-md">
               <NewsletterForm
-                locale={locale}
                 placeholder={t.newsletter.placeholder}
                 cta={t.newsletter.cta}
                 successText={dict.common.sent}

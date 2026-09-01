@@ -31,7 +31,7 @@ export function CataloguesList({ locale, dict }: Props) {
   }, []);
 
   const t = dict.catalogues;
-  const isAr = locale === "ar";
+  const isAr = false;
 
   // Filter logic
   const filteredCatalogues = cataloguesData.filter((item) => {

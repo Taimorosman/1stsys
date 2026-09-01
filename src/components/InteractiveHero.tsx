@@ -3,7 +3,7 @@
 import * as React from "react";
 
 interface InteractiveHeroProps {
-  isAr: boolean;
+  isAr?: boolean;
   altText: string;
   badgeText1?: string;
   badgeSub1?: string;

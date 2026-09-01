@@ -5,9 +5,7 @@ import type { Locale } from "@/i18n/config";
 import { useLanguage } from "@/context/LanguageContext";
 
 export function WhatsAppFab({ locale: propLocale }: { locale?: Locale }) {
-  const langContext = useLanguage();
-  const locale = langContext?.locale || propLocale || "en";
-  const label = locale === "ur" ? "واٹس ایپ پر رابطہ کریں" : locale === "ar" ? "تواصل عبر واتساب" : "Chat on WhatsApp";
+  const label = "Chat on WhatsApp";
   
   return (
     <a

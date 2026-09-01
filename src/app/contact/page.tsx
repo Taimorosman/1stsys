@@ -8,19 +8,18 @@ import { SampleRequestForm } from "@/components/SampleRequestForm";
 
 export default async function ContactPage() {
   const locale: Locale = "en";
-  const isAr = (locale as string) === "ar";
   const dict = getDictionary(locale);
   const t = dict.contact;
 
   const getMapLink = (city: string) => {
     const c = city.toLowerCase();
-    if (c.includes("riyadh") || c.includes("رياض")) {
+    if (c.includes("riyadh")) {
       return "https://www.google.com/maps/search/?api=1&query=Al-Qairawan+District+Riyadh+Saudi+Arabia";
     }
-    if (c.includes("jeddah") || c.includes("جدة")) {
+    if (c.includes("jeddah")) {
       return "https://www.google.com/maps/search/?api=1&query=King+Abdulaziz+Road+Jeddah+Saudi+Arabia";
     }
-    if (c.includes("dammam") || c.includes("دمام")) {
+    if (c.includes("dammam")) {
       return "https://www.google.com/maps/search/?api=1&query=Second+Industrial+City+Dammam+Saudi+Arabia";
     }
     return "https://maps.google.com";
@@ -129,7 +128,7 @@ export default async function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="ui-card block w-full sm:w-28 h-36 sm:h-28 shrink-0 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)]/40 relative overflow-hidden group/map transition-all duration-300 hover:border-[var(--color-accent)]/55 hover:shadow-lg"
-                    title={isAr ? "افتح الموقع في خرائط جوجل" : "Open location in Google Maps"}
+                    title="Open location in Google Maps"
                   >
                     <div className="absolute inset-0 hero-grid-bg opacity-30 pointer-events-none" />
                     <svg viewBox="0 0 400 400" className="w-full h-full transition-transform duration-500 group-hover/map:scale-105" fill="none">
@@ -141,7 +140,7 @@ export default async function ContactPage() {
                         fill="rgba(0, 189, 58, 0.02)"
                       />
                       {/* Riyadh dot */}
-                      {office.city === "Riyadh" || office.city === "الرياض" ? (
+                      {office.city === "Riyadh" ? (
                         <g>
                           <circle cx="240" cy="200" r="22" fill="var(--color-accent)" opacity="0.15">
                             <animate attributeName="r" values="22;35;22" dur="2.5s" repeatCount="indefinite" />
@@ -153,7 +152,7 @@ export default async function ContactPage() {
                       )}
                       
                       {/* Jeddah dot */}
-                      {office.city === "Jeddah" || office.city === "جدة" ? (
+                      {office.city === "Jeddah" ? (
                         <g>
                           <circle cx="140" cy="220" r="20" fill="var(--color-accent)" opacity="0.15">
                             <animate attributeName="r" values="20;32;20" dur="2.5s" repeatCount="indefinite" />
@@ -165,7 +164,7 @@ export default async function ContactPage() {
                       )}
 
                       {/* Dammam dot */}
-                      {office.city === "Dammam" || office.city === "الدمام" ? (
+                      {office.city === "Dammam" ? (
                         <g>
                           <circle cx="310" cy="170" r="20" fill="var(--color-accent)" opacity="0.15">
                             <animate attributeName="r" values="20;32;20" dur="2.5s" repeatCount="indefinite" />
@@ -197,7 +196,7 @@ export default async function ContactPage() {
                 </div>
               </div>
               <Icon
-                name={isAr ? "ArrowLeft" : "ArrowRight"}
+                name="ArrowRight"
                 size={16}
                 className="text-[var(--color-fg-subtle)]"
               />
@@ -217,7 +216,7 @@ export default async function ContactPage() {
           <div>
             <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
               <span className="h-px w-6 bg-[var(--color-accent)]" />
-              {isAr ? "خريطة الحضور" : "Coverage Map"}
+              Coverage Map
             </span>
             <h2 className="text-display mt-4 text-3xl font-medium md:text-5xl">
               {t.network.title}
@@ -235,7 +234,7 @@ export default async function ContactPage() {
                 />
                 <div className="mt-3 text-2xl font-semibold">24h</div>
                 <div className="text-xs text-[var(--color-fg-muted)]">
-                  {isAr ? "تسليم سريع" : "Express delivery"}
+                  Express delivery
                 </div>
               </div>
               <div className="ui-card rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
@@ -246,7 +245,7 @@ export default async function ContactPage() {
                 />
                 <div className="mt-3 text-2xl font-semibold">3</div>
                 <div className="text-xs text-[var(--color-fg-muted)]">
-                  {isAr ? "مكاتب إقليمية" : "Regional offices"}
+                  Regional offices
                 </div>
               </div>
               <div className="ui-card rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
@@ -257,7 +256,7 @@ export default async function ContactPage() {
                 />
                 <div className="mt-3 text-2xl font-semibold">KSA</div>
                 <div className="text-xs text-[var(--color-fg-muted)]">
-                  {isAr ? "تغطية وطنية" : "Nationwide"}
+                  Nationwide
                 </div>
               </div>
             </div>

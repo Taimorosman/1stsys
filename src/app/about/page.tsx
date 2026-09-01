@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useLanguage } from "@/context/LanguageContext";
 import { PageHero } from "@/components/PageHero";
@@ -8,11 +8,9 @@ import { Button } from "@/components/Button";
 import { Icon, type IconName } from "@/components/Icon";
 
 export default function AboutPage() {
-  const { locale, dict, dir } = useLanguage();
+  const { dict } = useLanguage();
   const t = dict.about;
-  const isAr = locale === "ar";
-  const isRtl = dir === "rtl";
-  const arrow = isRtl ? "ArrowLeft" : "ArrowRight";
+  const arrow = "ArrowRight";
 
   return (
     <>
@@ -77,7 +75,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/60 via-transparent to-transparent z-10 pointer-events-none" />
                 <img
                   src="/images/concrete_construction.png"
-                  alt={isAr ? "كيماويات البناء والديكور السعودية" : "Saudi Decorative and Construction Chemicals"}
+                  alt="Saudi Decorative and Construction Chemicals"
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-108"
                 />
               </div>
