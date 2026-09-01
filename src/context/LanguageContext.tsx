@@ -8,7 +8,7 @@ import { getDictionary, type Dict } from "@/i18n/getDictionary";
 interface LanguageContextType {
   locale: Locale;
   dict: Dict;
-  dir: "ltr";
+  dir: "ltr" | "rtl";
   setLocale: (locale: Locale) => void;
   toggleLocale: () => void;
 }
@@ -17,15 +17,41 @@ const LanguageContext = React.createContext<LanguageContextType | undefined>(und
 
 export function LanguageProvider({
   children,
+  initialLocale = defaultLocale,
 }: {
   children: React.ReactNode;
+  initialLocale?: Locale;
 }) {
-  const locale: Locale = defaultLocale;
-  const dict = React.useMemo(() => getDictionary(locale), [locale]);
-  const dir = "ltr";
+  const [locale, setLocaleState] = React.useState<Locale>(initialLocale);
+  const [mounted, setMounted] = React.useState(false);
 
-  const setLocale = React.useCallback(() => {}, []);
-  const toggleLocale = React.useCallback(() => {}, []);
+  React.useEffect(() => {
+    setMounted(true);
+    const saved = localStorage.getItem("tfs_locale") as Locale | null;
+    if (saved && (saved === "en" || saved === "ur")) {
+      setLocaleState(saved);
+      document.documentElement.lang = saved;
+      document.documentElement.dir = localeMeta[saved]?.dir || "ltr";
+    }
+  }, []);
+
+  const setLocale = React.useCallback((newLocale: Locale) => {
+    setLocaleState(newLocale);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("tfs_locale", newLocale);
+      document.cookie = `tfs_locale=${newLocale};path=/;max-age=31536000;SameSite=Lax`;
+      document.documentElement.lang = newLocale;
+      document.documentElement.dir = localeMeta[newLocale]?.dir || "ltr";
+    }
+  }, []);
+
+  const toggleLocale = React.useCallback(() => {
+    const next: Locale = locale === "en" ? "ur" : "en";
+    setLocale(next);
+  }, [locale, setLocale]);
+
+  const dict = React.useMemo(() => getDictionary(locale), [locale]);
+  const dir = localeMeta[locale]?.dir || "ltr";
 
   return (
     <LanguageContext.Provider value={{ locale, dict, dir, setLocale, toggleLocale }}>
@@ -37,11 +63,12 @@ export function LanguageProvider({
 export function useLanguage() {
   const context = React.useContext(LanguageContext);
   if (!context) {
+    // Fallback if rendered outside provider
     const fallbackLocale = defaultLocale;
     return {
       locale: fallbackLocale,
       dict: getDictionary(fallbackLocale),
-      dir: "ltr" as const,
+      dir: localeMeta[fallbackLocale]?.dir || "ltr",
       setLocale: () => {},
       toggleLocale: () => {},
     };

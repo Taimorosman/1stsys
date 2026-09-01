@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import type { Dict } from "@/i18n/getDictionary";
 import type { Locale } from "@/i18n/config";
 import { useLanguage } from "@/context/LanguageContext";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Icon } from "./Icon";
 import { Logo } from "./Logo";
 
@@ -20,6 +21,8 @@ export function Header({ locale: propLocale, dict: propDict }: Props) {
   
   const locale = langContext?.locale || propLocale || "en";
   const dict = langContext?.dict || propDict;
+  const dir = langContext?.dir || (locale === "ur" || locale === "ar" ? "rtl" : "ltr");
+  const isRtl = dir === "rtl";
 
   const [scrolled, setScrolled] = React.useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -87,13 +90,16 @@ export function Header({ locale: propLocale, dict: propDict }: Props) {
         </nav>
 
         <div className="flex items-center gap-2 md:gap-3">
+          {/* Language Switcher */}
+          <LanguageSwitcher variant="header" />
+
           {/* Request Sample CTA */}
           <Link
             href="/contact"
             className="hidden md:inline-flex items-center gap-2 rounded-full bg-[#1D1D1D] px-4 py-2 text-sm font-semibold text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white transition shadow-sm"
           >
             {dict.nav.cta}
-            <Icon name="ArrowRight" size={14} />
+            <Icon name={isRtl ? "ArrowLeft" : "ArrowRight"} size={14} />
           </Link>
 
           {/* Mobile Menu Button */}
@@ -123,18 +129,19 @@ export function Header({ locale: propLocale, dict: propDict }: Props) {
                   }`}
                 >
                   <span>{l.label}</span>
-                  <Icon name="ArrowRight" size={16} />
+                  <Icon name={isRtl ? "ArrowLeft" : "ArrowRight"} size={16} />
                 </Link>
               );
             })}
 
             <div className="mt-3 flex flex-col gap-2">
+              <LanguageSwitcher variant="mobile" />
               <Link
                 href="/contact"
                 className="flex items-center justify-center gap-2 rounded-xl bg-[#1D1D1D] px-3 py-3 text-sm font-semibold text-[#F9F7F3] hover:bg-[var(--color-accent)] hover:text-white transition shadow-sm w-full"
               >
                 {dict.nav.cta}
-                <Icon name="ArrowRight" size={14} />
+                <Icon name={isRtl ? "ArrowLeft" : "ArrowRight"} size={14} />
               </Link>
             </div>
           </nav>
